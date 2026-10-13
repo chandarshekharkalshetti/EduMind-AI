@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Assessment | EduMind AI</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="/" class="logo">EduMind <span>AI</span></a>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/assessment">Assessment</a>
+        <a href="/results">Results</a>
+        <a href="/roadmap">Roadmap</a>
+    </nav>
+</header>
+
+<main class="assessment-container">
+    <div class="assessment-heading">
+        <p class="eyebrow">CAREER DISCOVERY</p>
+        <h1>Let's Find Your Career Path</h1>
+        <p>Tell us about your interests and skills to explore suitable careers.</p>
+    </div>
+
+    <form action="/results" method="POST" class="assessment-form">
+
+        <h2>01. Education Details</h2>
+
+        <div class="form-group">
+            <label for="degree">Current Degree</label>
+            <select id="degree" name="degree" required>
+                <option value="">Select your degree</option>
+                <option value="B.Tech">B.Tech / B.E.</option>
+                <option value="BCA">BCA</option>
+                <option value="B.Sc">B.Sc.</option>
+                <option value="MCA">MCA</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="year">Current Year</label>
+            <select id="year" name="year" required>
+                <option value="">Select year</option>
+                <option value="1">First Year</option>
+                <option value="2">Second Year</option>
+                <option value="3">Third Year</option>
+                <option value="4">Fourth Year</option>
+                <option value="5">Postgraduate / Other</option>
+            </select>
+        </div>
+
+        <h2>02. Your Interests</h2>
+        <p class="form-hint">Select all areas that interest you.</p>
+
+        <div class="checkbox-grid">
+            <label><input type="checkbox" name="interests" value="AI"> AI and Machine Learning</label>
+            <label><input type="checkbox" name="interests" value="Data"> Data Analysis</label>
+            <label><input type="checkbox" name="interests" value="Web"> Web Development</label>
+            <label><input type="checkbox" name="interests" value="Software"> Software Development</label>
+            <label><input type="checkbox" name="interests" value="Testing"> Software Testing</label>
+        </div>
+
+        <h2>03. Programming Languages</h2>
+
+        <div class="checkbox-grid">
+            <label><input type="checkbox" name="programming" value="Python"> Python</label>
+            <label><input type="checkbox" name="programming" value="Java"> Java</label>
+            <label><input type="checkbox" name="programming" value="C++"> C++</label>
+            <label><input type="checkbox" name="programming" value="JavaScript"> JavaScript</label>
+        </div>
+
+        <h2>04. Technical Skills</h2>
+
+        <div class="checkbox-grid">
+            <label><input type="checkbox" name="technical" value="SQL"> SQL / Databases</label>
+            <label><input type="checkbox" name="technical" value="HTMLCSS"> HTML / CSS</label>
+            <label><input type="checkbox" name="technical" value="Statistics"> Statistics</label>
+            <label><input type="checkbox" name="technical" value="ML"> Machine Learning</label>
+            <label><input type="checkbox" name="technical" value="DataViz"> Data Visualization</label>
+            <label><input type="checkbox" name="technical" value="Git"> Git / GitHub</label>
+        </div>
+
+        <h2>05. Skill Proficiency</h2>
+
+        <div class="form-group">
+            <label for="proficiency">How would you describe your current skill level?</label>
+            <select id="proficiency" name="proficiency" required>
+                <option value="">Select proficiency</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+            </select>
+        </div>
+
+        <h2>06. Preferred Type of Work</h2>
+
+        <div class="form-group">
+            <label for="work">What would you enjoy doing most?</label>
+            <select id="work" name="work" required>
+                <option value="">Select preferred work</option>
+                <option value="Coding">Writing code and building applications</option>
+                <option value="Data">Analyzing data and finding patterns</option>
+                <option value="AI">Building intelligent systems</option>
+                <option value="Testing">Testing software and finding bugs</option>
+                <option value="Design">Designing websites and user interfaces</option>
+            </select>
+        </div>
+
+        <button type="submit" class="primary-btn form-submit">
+            Discover My Career →
+        </button>
+
+    </form>
+</main>
+
+<footer>
+    <p>© 2026 EduMind AI | Student Career Guidance Platform</p>
+</footer>
+
+</body>
+</html>

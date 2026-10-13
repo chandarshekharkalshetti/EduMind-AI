@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduMind AI | Discover Your Career</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="{{ url_for('home') }}" class="logo">EduMind <span>AI</span></a>
+
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="/assessment">Assessment</a>
+            <a href="/results">Results</a>
+            <a href="/roadmap">Roadmap</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">YOUR FUTURE, YOUR CHOICE</p>
+
+                <h1>Discover the Career That Fits <span>You.</span></h1>
+
+                <p class="hero-description">
+                    Explore career paths based on your interests, technical
+                    skills, and strengths. Get personalized recommendations
+                    and a roadmap to help you move forward.
+                </p>
+
+                <a href="/assessment" class="primary-btn">
+                    Start Career Assessment →
+                </a>
+
+                <p class="note">
+                    Discover your possibilities. Build your future.
+                </p>
+            </div>
+
+            <div class="hero-card">
+                <div class="card-icon">✦</div>
+                <p class="card-label">YOUR CAREER JOURNEY</p>
+                <h2>Find Your Direction</h2>
+
+                <div class="career-item">
+                    <span class="career-icon">⌘</span>
+                    <div>
+                        <strong>Software Development</strong>
+                        <p>Build applications and websites</p>
+                    </div>
+                </div>
+
+                <div class="career-item">
+                    <span class="career-icon">▥</span>
+                    <div>
+                        <strong>Data & Analytics</strong>
+                        <p>Discover insights from data</p>
+                    </div>
+                </div>
+
+                <div class="career-item">
+                    <span class="career-icon">✧</span>
+                    <div>
+                        <strong>AI & Machine Learning</strong>
+                        <p>Develop intelligent solutions</p>
+                    </div>
+                </div>
+
+                <p class="sample-note">
+                    Example career paths — not personalized predictions yet.
+                </p>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="section-heading">
+                <p class="eyebrow">HOW IT WORKS</p>
+                <h2>Three Steps to Your Next Move</h2>
+            </div>
+
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <span class="step-number">01</span>
+                    <h3>Share Your Interests</h3>
+                    <p>Tell us what you enjoy and which skills you have.</p>
+                </article>
+
+                <article class="feature-card">
+                    <span class="step-number">02</span>
+                    <h3>Explore Career Matches</h3>
+                    <p>Review career recommendations that fit your profile.</p>
+                </article>
+
+                <article class="feature-card">
+                    <span class="step-number">03</span>
+                    <h3>Build Your Roadmap</h3>
+                    <p>Identify skills to learn and projects to practice.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 EduMind AI | Student Career Guidance Platform</p>
+    </footer>
+
+</body>
+</html>
+

@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Results | EduMind AI</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="/" class="logo">EduMind <span>AI</span></a>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/assessment">Assessment</a>
+        <a href="/results">Results</a>
+        <a href="/roadmap">Roadmap</a>
+    </nav>
+</header>
+
+<main class="roadmap-container">
+
+    <section class="roadmap-heading">
+        <p class="eyebrow">YOUR CAREER ASSESSMENT</p>
+        <h1>Your Career Recommendations</h1>
+        <p>
+            Explore career paths that match your interests,
+            programming knowledge and technical skills.
+        </p>
+    </section>
+
+    {% if student %}
+
+    <section class="roadmap-intro">
+        <p class="career-tag">ASSESSMENT COMPLETED</p>
+        <h2>Your Results</h2>
+        <p>
+            Degree: {{ student.degree or "Not specified" }}
+            |
+            Year: {{ student.year or "Not specified" }}
+        </p>
+        <p>
+            These recommendations are generated using a
+            skill-based matching system.
+        </p>
+    </section>
+
+    <section class="roadmap-timeline">
+
+        {% for career in careers %}
+        <article class="roadmap-step">
+
+            <div class="timeline-number">
+                {{ "%02d" | format(loop.index) }}
+            </div>
+
+            <div class="timeline-content">
+
+                <p class="step-label">
+                    CAREER MATCH {{ loop.index }}
+                </p>
+
+                <h2>{{ career.name }}</h2>
+
+                <p class="match-score">
+                    Match score:
+                    <strong>{{ career.match }}%</strong>
+                </p>
+
+                
+                <h3>Why this career matches you</h3>
+
+                <ul>
+                    {% for reason in career.reasons %}
+                    <li>{{ reason }}</li>
+                    {% endfor %}
+                </ul>
+
+                <h3>Your relevant skills</h3>
+
+                {% if career.matched_skills %}
+                <ul>
+                    {% for skill in career.matched_skills %}
+                    <li>{{ skill }}</li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <p>No directly matching skills selected yet.</p>
+                {% endif %}
+
+                <h3>Skills to learn next</h3>
+
+                {% if career.skills_to_learn %}
+                <ul>
+                    {% for skill in career.skills_to_learn %}
+                    <li>{{ skill }}</li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <p>Your selected skills cover the listed career skills.</p>
+                {% endif %}
+
+
+                <a
+                    href="{{ url_for('roadmap', career=career.name) }}"
+                    class="primary-btn">
+                    View Learning Roadmap →
+                </a>
+
+            </div>
+
+        </article>
+
+        {% else %}
+        <article class="roadmap-step">
+            <div class="timeline-content">
+                <h2>No recommendations available</h2>
+                <p>
+                    Please complete the assessment again and
+                    select your interests and skills.
+                </p>
+                <a href="/assessment" class="primary-btn">
+                    Retake Assessment
+                </a>
+            </div>
+        </article>
+        {% endfor %}
+
+    </section>
+
+    {% else %}
+
+    <section class="roadmap-intro">
+        <h2>Discover Your Career Path</h2>
+        <p>
+            Complete the student assessment to receive your
+            career recommendations and learning roadmaps.
+        </p>
+        <a href="/assessment" class="primary-btn">
+            Start Assessment →
+        </a>
+    </section>
+
+    {% endif %}
+
+    <div class="roadmap-actions">
+        <a href="/assessment" class="secondary-btn">
+            Retake Assessment
+        </a>
+        <a href="/" class="primary-btn">
+            Back to Home
+        </a>
+    </div>
+
+</main>
+
+<footer>
+    <p>© 2026 EduMind AI | Student Career Guidance Platform</p>
+</footer>
+
+</body>
+</html>
