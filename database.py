@@ -9,7 +9,19 @@ import sqlite3
 from pathlib import Path
 from werkzeug.security import generate_password_hash, check_password_hash
 
+import firebase_db
+
 DB_PATH = Path(os.environ.get("DATABASE_PATH", Path(__file__).parent / "data" / "edumind.db"))
+
+
+def is_cloud_mode():
+    """Return True if Firebase Firestore is configured and connected."""
+    return firebase_db.is_firebase_configured() and firebase_db.get_firestore_client() is not None
+
+
+def get_active_db_type():
+    """Return active database engine name."""
+    return "Firebase Firestore (Cloud)" if is_cloud_mode() else "SQLite (Local)"
 
 
 def get_db():
@@ -22,7 +34,10 @@ def get_db():
 
 
 def init_db():
-    """Create all relational tables and indexes if they do not exist."""
+    """Create all relational tables and indexes if they do not exist. Also initializes Firestore if configured."""
+    if is_cloud_mode():
+        firebase_db.init_firestore()
+
     conn = get_db()
     with conn:
         conn.executescript("""
@@ -128,6 +143,9 @@ def init_db():
 
 def create_user(email, password, full_name, degree="", current_year="", field_of_study="", institution="", country=""):
     """Register a new student user and create their profile. Returns user dict or None if email exists."""
+    if is_cloud_mode():
+        return firebase_db.create_user(email, password, full_name, degree, current_year, field_of_study, institution, country)
+
     clean_email = email.strip().lower()
     clean_name = full_name.strip()
     password_hash = generate_password_hash(password)
@@ -156,6 +174,9 @@ def create_user(email, password, full_name, degree="", current_year="", field_of
 
 def authenticate_user(email, password):
     """Authenticate student by email and password. Returns user dict on success, None on failure."""
+    if is_cloud_mode():
+        return firebase_db.authenticate_user(email, password)
+
     clean_email = email.strip().lower()
     conn = get_db()
     try:
@@ -169,6 +190,9 @@ def authenticate_user(email, password):
 
 def get_user_by_email(email):
     """Fetch user by email."""
+    if is_cloud_mode():
+        return firebase_db.get_user_by_email(email)
+
     clean_email = email.strip().lower()
     conn = get_db()
     try:
@@ -180,6 +204,9 @@ def get_user_by_email(email):
 
 def get_user_by_id(user_id):
     """Fetch user by id."""
+    if is_cloud_mode():
+        return firebase_db.get_user_by_id(user_id)
+
     conn = get_db()
     try:
         user = conn.execute("SELECT id, email, full_name, created_at FROM users WHERE id = ?", (user_id,)).fetchone()
@@ -190,6 +217,9 @@ def get_user_by_id(user_id):
 
 def get_student_profile(user_id):
     """Fetch profile data for a specific student."""
+    if is_cloud_mode():
+        return firebase_db.get_student_profile(user_id)
+
     conn = get_db()
     try:
         row = conn.execute(
@@ -209,6 +239,9 @@ def get_student_profile(user_id):
 
 def update_student_profile(user_id, profile_data):
     """Update profile details for a student."""
+    if is_cloud_mode():
+        return firebase_db.update_student_profile(user_id, profile_data)
+
     conn = get_db()
     try:
         with conn:
@@ -249,6 +282,9 @@ def update_student_profile(user_id, profile_data):
 
 def save_assessment_record(user_id, input_data, recommendations):
     """Persist an assessment and its generated career recommendations."""
+    if is_cloud_mode():
+        return firebase_db.save_assessment_record(user_id, input_data, recommendations)
+
     conn = get_db()
     try:
         with conn:
@@ -284,6 +320,9 @@ def save_assessment_record(user_id, input_data, recommendations):
 
 def get_user_assessments(user_id, limit=10):
     """Retrieve assessment history for a specific student."""
+    if is_cloud_mode():
+        return firebase_db.get_user_assessments(user_id, limit)
+
     conn = get_db()
     try:
         rows = conn.execute(
@@ -335,6 +374,9 @@ def get_user_assessments(user_id, limit=10):
 
 def get_latest_assessment(user_id):
     """Retrieve the most recent assessment for a student."""
+    if is_cloud_mode():
+        return firebase_db.get_latest_assessment(user_id)
+
     assessments = get_user_assessments(user_id, limit=1)
     return assessments[0] if assessments else None
 
@@ -343,6 +385,9 @@ def get_latest_assessment(user_id):
 
 def toggle_save_career(user_id, career_id):
     """Toggle bookmark on a career. Returns True if saved, False if removed."""
+    if is_cloud_mode():
+        return firebase_db.toggle_save_career(user_id, career_id)
+
     conn = get_db()
     try:
         with conn:
@@ -370,6 +415,9 @@ def is_career_saved(user_id, career_id):
     """Check if a career is bookmarked by a student."""
     if not user_id:
         return False
+    if is_cloud_mode():
+        return firebase_db.is_career_saved(user_id, career_id)
+
     conn = get_db()
     try:
         row = conn.execute(
@@ -383,6 +431,9 @@ def is_career_saved(user_id, career_id):
 
 def get_user_saved_careers(user_id):
     """Fetch all saved careers with catalog metadata for a student."""
+    if is_cloud_mode():
+        return firebase_db.get_user_saved_careers(user_id)
+
     conn = get_db()
     try:
         rows = conn.execute(
@@ -417,6 +468,9 @@ def get_user_saved_careers(user_id):
 
 def save_user_roadmap(user_id, career_id, duration_months, stages):
     """Save or update a student's active roadmap for a career."""
+    if is_cloud_mode():
+        return firebase_db.save_user_roadmap(user_id, career_id, duration_months, stages)
+
     conn = get_db()
     try:
         with conn:
@@ -438,6 +492,9 @@ def save_user_roadmap(user_id, career_id, duration_months, stages):
 
 def get_user_roadmaps(user_id):
     """Fetch saved roadmaps for a student."""
+    if is_cloud_mode():
+        return firebase_db.get_user_roadmaps(user_id)
+
     conn = get_db()
     try:
         rows = conn.execute(

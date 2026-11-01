@@ -32,6 +32,7 @@ database.init_db()
 if not careers_catalog.get_all_careers():
     import seed_careers
     seed_careers.seed_database()
+print(f"[Database] EduMind AI Engine: {database.get_active_db_type()}")
 
 
 # ---------------- AUTHENTICATION HELPERS ----------------
@@ -49,11 +50,14 @@ def login_required(view_func):
 
 @app.context_processor
 def inject_current_user():
-    """Make current_user available to all Jinja2 templates."""
+    """Make current_user and active_db available to all Jinja2 templates."""
     user_id = session.get("user_id")
-    if user_id:
-        return {"current_user": database.get_user_by_id(user_id)}
-    return {"current_user": None}
+    user = database.get_user_by_id(user_id) if user_id else None
+    return {
+        "current_user": user,
+        "active_db": database.get_active_db_type(),
+        "is_cloud_db": database.is_cloud_mode(),
+    }
 
 
 # ---------------- PUBLIC HOME PAGE ----------------

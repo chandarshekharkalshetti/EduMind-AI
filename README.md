@@ -43,7 +43,9 @@ EduMind AI is an intelligent, full-stack student career guidance and recommendat
 ## 🛠 Technology Stack
 
 - **Backend**: Python 3.12+, Flask 3.1.3
-- **Database**: SQLite with parameterized queries, foreign key enforcement, and automated migrations
+- **Database Engine (Dual-Engine)**:
+  - **Cloud Mode**: Firebase Firestore (Google Cloud Serverless NoSQL Document DB) via `firebase-admin`
+  - **Local Mode**: SQLite3 with parameterized queries, foreign key enforcement, and automated auto-seeding
 - **Frontend**: HTML5, Vanilla CSS3 (Custom responsive design system), Jinja2 templates, JavaScript (Fetch API)
 - **AI & Analytics**: Google Gemini API (`requests`), Pandas, Scikit-learn, rule-based compatibility engine
 - **WSGI / Production**: Gunicorn
@@ -108,7 +110,20 @@ EduMind AI is an intelligent, full-stack student career guidance and recommendat
    python seed_careers.py
    ```
 
-5. **(Optional) Configure Google Gemini API Key**:
+5. **(Optional) Configure Firebase Cloud Firestore**:
+   EduMind AI supports both local SQLite and Cloud Firestore seamlessly. To connect Firebase:
+   1. Open [Firebase Console](https://console.firebase.google.com/) and create a project.
+   2. Enable **Cloud Firestore** under Build -> Firestore Database.
+   3. In **Project Settings** -> **Service Accounts**, click **Generate New Private Key**.
+   4. Save the downloaded JSON file as `firebase-key.json` in the project root.
+   5. Verify the connection and seed Firestore:
+      ```bash
+      python sync_to_firebase.py --status
+      python sync_to_firebase.py --seed-catalog
+      ```
+   *(If `firebase-key.json` is not provided, the app automatically runs on local SQLite without downtime).*
+
+6. **(Optional) Configure Google Gemini API Key**:
    Create a `.env` file in the root directory:
    ```env
    GEMINI_API_KEY=your_actual_google_gemini_api_key_here
@@ -116,7 +131,7 @@ EduMind AI is an intelligent, full-stack student career guidance and recommendat
    ```
    *Note: If no API key is set, the platform operates in deterministic mode without error.*
 
-6. **Start the development server**:
+7. **Start the development server**:
    ```bash
    python app.py
    ```
@@ -134,6 +149,11 @@ python test_app.py -v
 Run the original recommender tests (5 tests):
 ```bash
 python test_recommender.py -v
+```
+
+Run the Firebase Cloud integration tests (4 tests):
+```bash
+python test_firebase_sync.py -v
 ```
 
 ---

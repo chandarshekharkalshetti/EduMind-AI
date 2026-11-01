@@ -7,6 +7,11 @@ __pycache__/
 
 # Environment variables and secrets
 .env
+firebase-key.json
+serviceAccountKey.json
+*firebase-adminsdk*.json
+google-credentials.json
+
 
 # Editor settings
 .vscode/

@@ -7,6 +7,7 @@ for all global careers stored in the SQLite database and JSON catalog.
 import json
 from pathlib import Path
 import database
+import firebase_db
 
 DATA_FILE = Path(__file__).parent / "data" / "careers_data.json"
 
@@ -38,7 +39,12 @@ def _row_to_career(row):
 
 
 def get_all_careers():
-    """Retrieve all careers from database."""
+    """Retrieve all careers from database (Cloud or SQLite)."""
+    if database.is_cloud_mode():
+        cloud_careers = firebase_db.get_all_careers()
+        if cloud_careers:
+            return cloud_careers
+
     conn = database.get_db()
     try:
         rows = conn.execute("SELECT * FROM career_catalog ORDER BY title ASC").fetchall()
@@ -51,6 +57,12 @@ def get_career_by_id(career_id):
     """Fetch a career by its unique ID (or fallback to matching by title)."""
     if not career_id:
         return None
+
+    if database.is_cloud_mode():
+        cloud_career = firebase_db.get_career_by_id(career_id)
+        if cloud_career:
+            return cloud_career
+
     clean_id = career_id.strip().lower().replace(" ", "-")
     conn = database.get_db()
     try:
