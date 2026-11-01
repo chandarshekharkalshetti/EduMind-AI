@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | EduMind AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="{{ url_for('home') }}" class="logo">EduMind <span>AI</span></a>
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('careers_directory') }}">Explore Careers</a>
+        <a href="{{ url_for('assessment') }}">Assessment</a>
+        <a href="{{ url_for('dashboard') }}" class="nav-link active">Dashboard</a>
+        <a href="{{ url_for('profile') }}">Profile</a>
+        <a href="{{ url_for('logout') }}" class="secondary-btn nav-btn">Logout ({{ current_user.full_name.split()[0] }})</a>
+    </nav>
+</header>
+
+<main class="dashboard-container">
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        <span class="alert-icon">
+                            {% if category == 'success' %}✓{% elif category == 'error' %}!{% else %}ℹ{% endif %}
+                        </span>
+                        <span>{{ message }}</span>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <!-- Welcome & Student Profile Header -->
+    <section class="dashboard-welcome-banner">
+        <div class="welcome-left">
+            <div class="profile-avatar-circle">
+                {{ (profile.full_name[0] if profile and profile.full_name else 'S') | upper }}
+            </div>
+            <div class="welcome-text">
+                <p class="eyebrow-light">STUDENT WORKSPACE</p>
+                <h1>Welcome, {{ profile.full_name }}!</h1>
+                <p class="student-academic-line">
+                    🎓 {{ profile.degree or "Degree not specified" }}
+                    {% if profile.current_year %} • Year {{ profile.current_year }}{% endif %}
+                    {% if profile.institution %} • {{ profile.institution }}{% endif %}
+                    {% if profile.country %} • {{ profile.country }}{% endif %}
+                </p>
+            </div>
+        </div>
+        <div class="welcome-actions">
+            <a href="{{ url_for('assessment') }}" class="primary-btn banner-btn">
+                {% if latest_assessment %}Retake Assessment ↺{% else %}Start Career Assessment →{% endif %}
+            </a>
+            <a href="{{ url_for('profile') }}" class="secondary-btn banner-secondary-btn">
+                Edit Profile ⚙
+            </a>
+        </div>
+    </section>
+
+    <!-- Stat Summary Cards -->
+    <section class="dashboard-stats-grid">
+        <div class="stat-card">
+            <div class="stat-icon">🎯</div>
+            <div class="stat-data">
+                <span class="stat-label">ASSESSMENT STATUS</span>
+                <strong>{% if latest_assessment %}Completed{% else %}Pending{% endif %}</strong>
+                <p class="stat-subtext">
+                    {% if latest_assessment %}
+                        Latest: {{ latest_assessment.created_at[:10] }}
+                    {% else %}
+                        No assessments taken yet
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">⭐</div>
+            <div class="stat-data">
+                <span class="stat-label">SAVED CAREERS</span>
+                <strong>{{ saved_careers | length }}</strong>
+                <p class="stat-subtext">Bookmarked in your library</p>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">🗺</div>
+            <div class="stat-data">
+                <span class="stat-label">ACTIVE ROADMAPS</span>
+                <strong>{{ roadmaps | length }}</strong>
+                <p class="stat-subtext">Target skill roadmaps</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Recommended Careers -->
+    <section class="dashboard-section-card">
+        <div class="section-title-bar">
+            <div>
+                <p class="eyebrow">YOUR TOP RECOMMENDATIONS</p>
+                <h2>Recommended Career Paths</h2>
+            </div>
+            {% if latest_assessment %}
+                <a href="{{ url_for('results') }}" class="secondary-btn">View Detailed Results →</a>
+            {% endif %}
+        </div>
+
+        {% if latest_assessment and latest_assessment.recommendations %}
+            <div class="dashboard-recs-grid">
+                {% for rec in latest_assessment.recommendations[:3] %}
+                    <div class="dashboard-rec-card">
+                        <div class="rec-card-top">
+                            <span class="step-number">{{ loop.index }}</span>
+                            <span class="match-score-pill">{{ rec.match }}% Match</span>
+                        </div>
+                        <h3>{{ rec.name }}</h3>
+                        <ul class="rec-reasons-preview">
+                            {% for reason in rec.reasons[:2] %}
+                                <li>{{ reason }}</li>
+                            {% endfor %}
+                        </ul>
+                        <div class="rec-card-actions">
+                            <a href="{{ url_for('roadmap', career=rec.name) }}" class="primary-btn btn-sm">
+                                View Learning Roadmap →
+                            </a>
+                            <a href="{{ url_for('careers_directory', q=rec.name) }}" class="secondary-btn btn-sm">
+                                Explore Details
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="dashboard-empty-box">
+                <p>You haven't completed a career assessment yet. Discover which career fits your interests and skills.</p>
+                <a href="{{ url_for('assessment') }}" class="primary-btn" style="margin-top: 15px;">
+                    Take Career Assessment Now →
+                </a>
+            </div>
+        {% endif %}
+    </section>
+
+    <!-- Two-Column Layout: Saved Careers & Roadmaps -->
+    <div class="dashboard-split-grid">
+
+        <!-- Saved Careers Library -->
+        <section class="dashboard-section-card">
+            <div class="section-title-bar">
+                <div>
+                    <p class="eyebrow">BOOKMARKS</p>
+                    <h2>Saved Careers</h2>
+                </div>
+                <a href="{{ url_for('careers_directory') }}" class="secondary-btn">Browse Catalog →</a>
+            </div>
+
+            {% if saved_careers %}
+                <div class="saved-careers-list">
+                    {% for sc in saved_careers %}
+                        <div class="saved-career-item" id="saved-career-{{ sc.id }}">
+                            <div class="saved-career-info">
+                                <span class="category-pill-sm">{{ sc.category }}</span>
+                                <h4><a href="{{ url_for('career_detail', career_id=sc.id) }}">{{ sc.title }}</a></h4>
+                                <p class="saved-date">Bookmarked on {{ sc.saved_at[:10] if sc.saved_at else 'Recent' }}</p>
+                            </div>
+                            <div class="saved-career-item-actions">
+                                <a href="{{ url_for('roadmap', career=sc.title) }}" class="secondary-btn btn-xs">Roadmap</a>
+                                <button class="btn-remove-bookmark" onclick="removeSaved('{{ sc.id }}', this)" title="Remove bookmark">✕</button>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="dashboard-empty-box">
+                    <p>No saved careers yet. Browse the global directory to bookmark careers you want to track.</p>
+                    <a href="{{ url_for('careers_directory') }}" class="secondary-btn" style="margin-top: 12px;">Explore 22 Categories</a>
+                </div>
+            {% endif %}
+        </section>
+
+        <!-- Active Roadmaps & Career Readiness -->
+        <section class="dashboard-section-card">
+            <div class="section-title-bar">
+                <div>
+                    <p class="eyebrow">DEVELOPMENT</p>
+                    <h2>Your Learning Roadmaps</h2>
+                </div>
+            </div>
+
+            {% if roadmaps %}
+                <div class="saved-roadmaps-list">
+                    {% for rm in roadmaps %}
+                        <div class="roadmap-summary-item">
+                            <div class="roadmap-summary-info">
+                                <span class="badge badge-difficulty">{{ rm.duration_months }} Months</span>
+                                <h4>{{ rm.career_title }}</h4>
+                                <p class="roadmap-stages-count">{{ rm.stages | length }} learning milestones</p>
+                            </div>
+                            <a href="{{ url_for('roadmap', career=rm.career_title, duration=rm.duration_months) }}" class="primary-btn btn-sm">
+                                Open Roadmap →
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="dashboard-empty-box">
+                    <p>Generate a customized 3, 6, or 12-month roadmap from any recommended or explored career.</p>
+                    <a href="{{ url_for('roadmap', career='Python Developer') }}" class="secondary-btn" style="margin-top: 12px;">View Sample Roadmap</a>
+                </div>
+            {% endif %}
+        </section>
+
+    </div>
+
+    <!-- Assessment History Table -->
+    {% if assessments_history %}
+        <section class="dashboard-section-card" style="margin-top: 35px;">
+            <div class="section-title-bar">
+                <div>
+                    <p class="eyebrow">ACTIVITY RECORD</p>
+                    <h2>Assessment History</h2>
+                </div>
+            </div>
+
+            <div class="history-table-wrapper">
+                <table class="history-table">
+                    <thead>
+                        <tr>
+                            <th>Assessment Date</th>
+                            <th>Education Recorded</th>
+                            <th>Top Match 1</th>
+                            <th>Top Match 2</th>
+                            <th>Top Match 3</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for record in assessments_history %}
+                            <tr>
+                                <td>{{ record.created_at[:10] }}</td>
+                                <td>{{ record.input_data.degree or "Not set" }} (Yr {{ record.input_data.year or "1" }})</td>
+                                <td>
+                                    {% if record.recommendations | length > 0 %}
+                                        <strong>{{ record.recommendations[0].name }}</strong> ({{ record.recommendations[0].match }}%)
+                                    {% else %}
+                                        -
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if record.recommendations | length > 1 %}
+                                        {{ record.recommendations[1].name }} ({{ record.recommendations[1].match }}%)
+                                    {% else %}
+                                        -
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if record.recommendations | length > 2 %}
+                                        {{ record.recommendations[2].name }} ({{ record.recommendations[2].match }}%)
+                                    {% else %}
+                                        -
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <a href="{{ url_for('results') }}" class="secondary-btn btn-xs">View Result</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    {% endif %}
+
+</main>
+
+<footer>
+    <p>© 2026 EduMind AI | Student Career Guidance Platform</p>
+</footer>
+
+<script>
+function removeSaved(careerId, button) {
+    if (!confirm('Remove this career from your saved list?')) return;
+    fetch('/api/save-career/' + encodeURIComponent(careerId), {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'}
+    })
+    .then(r => r.json())
+    .then(data => {
+        const item = document.getElementById('saved-career-' + careerId);
+        if (item) item.remove();
+    })
+    .catch(err => console.error(err));
+}
+</script>
+
+</body>
+</html>

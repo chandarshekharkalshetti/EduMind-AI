@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile | EduMind AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="{{ url_for('home') }}" class="logo">EduMind <span>AI</span></a>
+
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('careers_directory') }}">Explore Careers</a>
+            <a href="{{ url_for('assessment') }}">Assessment</a>
+            <a href="{{ url_for('dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('profile') }}" class="nav-link active">Profile</a>
+            <a href="{{ url_for('logout') }}" class="secondary-btn nav-btn">Logout</a>
+        </nav>
+    </header>
+
+    <main class="assessment-container">
+        <div class="assessment-heading">
+            <p class="eyebrow">ACCOUNT SETTINGS</p>
+            <h1>Student Profile</h1>
+            <p>Manage your academic profile and personal education information.</p>
+        </div>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">
+                            <span class="alert-icon">
+                                {% if category == 'success' %}✓{% elif category == 'error' %}!{% else %}ℹ{% endif %}
+                            </span>
+                            <span>{{ message }}</span>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <div class="profile-card-container">
+            <div class="profile-header-banner">
+                <div class="profile-avatar-circle">
+                    {{ (profile.full_name[0] if profile and profile.full_name else 'S') | upper }}
+                </div>
+                <div class="profile-meta">
+                    <h2>{{ profile.full_name }}</h2>
+                    <p class="profile-email">✉ {{ profile.email }}</p>
+                    <p class="profile-joined">Member since: {{ profile.created_at[:10] if profile.created_at else 'Active' }}</p>
+                </div>
+            </div>
+
+            <form action="{{ url_for('profile') }}" method="POST" class="assessment-form">
+
+                <h2>1. Personal Details</h2>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="full_name">Full Name</label>
+                        <input type="text" id="full_name" name="full_name" value="{{ profile.full_name }}" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email_static">Email Address</label>
+                        <input type="email" id="email_static" value="{{ profile.email }}" disabled title="Email cannot be changed">
+                        <p class="field-hint">Primary student identifier.</p>
+                    </div>
+                </div>
+
+                <h2>2. Academic Details</h2>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="degree">Current Degree / Qualification</label>
+                        <select id="degree" name="degree">
+                            <option value="">Select qualification</option>
+                            <option value="B.Tech" {% if profile.degree == 'B.Tech' %}selected{% endif %}>B.Tech / B.E. (Engineering)</option>
+                            <option value="BCA" {% if profile.degree == 'BCA' %}selected{% endif %}>BCA (Computer Applications)</option>
+                            <option value="B.Sc" {% if profile.degree == 'B.Sc' %}selected{% endif %}>B.Sc (Sciences / IT)</option>
+                            <option value="B.Com" {% if profile.degree == 'B.Com' %}selected{% endif %}>B.Com / BBA (Commerce & Business)</option>
+                            <option value="MBBS" {% if profile.degree == 'MBBS' %}selected{% endif %}>MBBS / Healthcare</option>
+                            <option value="BA" {% if profile.degree == 'BA' %}selected{% endif %}>BA (Humanities / Arts)</option>
+                            <option value="LLB" {% if profile.degree == 'LLB' %}selected{% endif %}>LLB / Legal Studies</option>
+                            <option value="MCA" {% if profile.degree == 'MCA' %}selected{% endif %}>MCA / M.Sc (Postgraduate)</option>
+                            <option value="M.Tech" {% if profile.degree == 'M.Tech' %}selected{% endif %}>M.Tech / ME</option>
+                            <option value="MBA" {% if profile.degree == 'MBA' %}selected{% endif %}>MBA / Management</option>
+                            <option value="Diploma" {% if profile.degree == 'Diploma' %}selected{% endif %}>Polytechnic / Diploma</option>
+                            <option value="High School" {% if profile.degree == 'High School' %}selected{% endif %}>High School / Pre-University</option>
+                            <option value="Other" {% if profile.degree == 'Other' %}selected{% endif %}>Other Qualification</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="current_year">Current Year / Stage</label>
+                        <select id="current_year" name="current_year">
+                            <option value="">Select year</option>
+                            <option value="1" {% if profile.current_year == '1' %}selected{% endif %}>1st Year (Freshman)</option>
+                            <option value="2" {% if profile.current_year == '2' %}selected{% endif %}>2nd Year (Sophomore)</option>
+                            <option value="3" {% if profile.current_year == '3' %}selected{% endif %}>3rd Year (Junior)</option>
+                            <option value="4" {% if profile.current_year == '4' %}selected{% endif %}>4th Year (Senior)</option>
+                            <option value="5" {% if profile.current_year == '5' %}selected{% endif %}>Postgraduate / Final Stage</option>
+                            <option value="Graduated" {% if profile.current_year == 'Graduated' %}selected{% endif %}>Recent Graduate</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="field_of_study">Field of Study / Major</label>
+                        <input type="text" id="field_of_study" name="field_of_study" value="{{ profile.field_of_study or '' }}" placeholder="e.g. Computer Science, Mechanical, Finance, Biotechnology">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="institution">College / University Name</label>
+                        <input type="text" id="institution" name="institution" value="{{ profile.institution or '' }}" placeholder="e.g. State University">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" name="country" value="{{ profile.country or '' }}" placeholder="e.g. India, United States, Canada, United Kingdom">
+                </div>
+
+                <div class="form-group">
+                    <label for="bio">Student Bio & Career Aspirations</label>
+                    <textarea id="bio" name="bio" rows="4" placeholder="Briefly describe your career goals, target industries, or areas you are curious about...">{{ profile.bio or '' }}</textarea>
+                </div>
+
+                <div class="profile-actions-bar">
+                    <button type="submit" class="primary-btn">
+                        Save Profile Changes
+                    </button>
+                    <a href="{{ url_for('dashboard') }}" class="secondary-btn">
+                        Back to Dashboard
+                    </a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 EduMind AI | Student Career Guidance Platform</p>
+    </footer>
+
+</body>
+</html>

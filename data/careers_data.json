@@ -1,0 +1,3400 @@
+[
+  {
+    "id": "python-developer",
+    "title": "Python Developer",
+    "category": "IT and Software Development",
+    "industry": "Information Technology",
+    "minimum_education": "Bachelor's Degree in Computer Science, IT, or related technical field / Equivalent Experience",
+    "recommended_qualifications": "B.Tech/BCA/B.Sc Computer Science or relevant technical portfolio",
+    "description": "Designs, builds, tests, and deploys scalable backend applications, APIs, automation workflows, and data pipelines using Python.",
+    "responsibilities": [
+      "Develop robust backend logic and RESTful APIs using frameworks like Flask, FastAPI, or Django",
+      "Design and optimize relational databases and SQL queries",
+      "Write modular, clean, and tested code with automated unit tests",
+      "Automate repetitive operational and data-processing tasks using Python scripts"
+    ],
+    "technical_skills": [
+      "Python",
+      "Flask",
+      "Django",
+      "SQL",
+      "Git",
+      "REST APIs",
+      "Docker",
+      "Linux"
+    ],
+    "soft_skills": [
+      "Problem Solving",
+      "Logical Reasoning",
+      "Collaboration",
+      "Debugging Mindset"
+    ],
+    "courses": [
+      "Modern Python Programming",
+      "Backend Web Development with Flask",
+      "SQL Database Architecture"
+    ],
+    "certifications": [
+      "PCAP – Certified Associate in Python Programming",
+      "PCPP – Certified Professional in Python Programming"
+    ],
+    "entrance_exams": [
+      "Standard university admissions criteria apply; requirements vary by institution and employer"
+    ],
+    "job_opportunities": [
+      "Software Firms",
+      "Fintech Companies",
+      "SaaS Enterprises",
+      "Cloud Consultancies"
+    ],
+    "related_titles": [
+      "Backend Engineer",
+      "Software Engineer",
+      "Python Backend Developer"
+    ],
+    "progression": [
+      "Junior Python Developer",
+      "Mid-Level Software Engineer",
+      "Senior Backend Architect",
+      "Lead Engineer"
+    ],
+    "industry_sectors": [
+      "Technology",
+      "Financial Services",
+      "E-Commerce",
+      "HealthTech"
+    ],
+    "learning_difficulty": "Moderate",
+    "roadmap_stages": [
+      {
+        "title": "Core Python & Data Structures",
+        "duration": "Month 1-2",
+        "topics": [
+          "Control flow",
+          "OOP",
+          "File I/O",
+          "Virtual environments"
+        ],
+        "project": "Student Record Management CLI"
+      },
+      {
+        "title": "Databases & Web APIs",
+        "duration": "Month 3-4",
+        "topics": [
+          "SQL",
+          "Relational modeling",
+          "Flask/FastAPI",
+          "JSON APIs"
+        ],
+        "project": "RESTful Task Management API"
+      },
+      {
+        "title": "Testing, Deployment & Advanced Backend",
+        "duration": "Month 5-6",
+        "topics": [
+          "pytest",
+          "Git workflows",
+          "Docker",
+          "Cloud deployment"
+        ],
+        "project": "Production-Ready Microservice"
+      }
+    ]
+  },
+  {
+    "id": "web-developer",
+    "title": "Web Developer",
+    "category": "IT and Software Development",
+    "industry": "Information Technology",
+    "minimum_education": "Bachelor's Degree in CS/IT or demonstrable full-stack portfolio",
+    "recommended_qualifications": "BCA, B.Tech, or Web Engineering certifications",
+    "description": "Constructs responsive, high-performance web applications and interactive digital portals using frontend and backend technologies.",
+    "responsibilities": [
+      "Build responsive client-side interfaces using HTML5, CSS3, and modern JavaScript",
+      "Integrate frontend templates with backend web servers and databases",
+      "Ensure cross-browser compatibility and mobile responsiveness",
+      "Optimize site performance, accessibility, and SEO foundations"
+    ],
+    "technical_skills": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "React",
+      "Node.js",
+      "Git",
+      "Responsive Design"
+    ],
+    "soft_skills": [
+      "Attention to Detail",
+      "User Empathy",
+      "Time Management",
+      "Communication"
+    ],
+    "courses": [
+      "Full Stack Web Foundations",
+      "Modern JavaScript (ES6+)",
+      "Responsive CSS Architecture"
+    ],
+    "certifications": [
+      "W3Schools Certified Web Developer",
+      "Meta Front-End Developer Certificate"
+    ],
+    "entrance_exams": [
+      "Requirements vary by university and employer"
+    ],
+    "job_opportunities": [
+      "Digital Agencies",
+      "Tech Startups",
+      "Corporate IT Departments",
+      "E-Commerce Platforms"
+    ],
+    "related_titles": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Web Application Engineer"
+    ],
+    "progression": [
+      "Junior Web Developer",
+      "Full Stack Developer",
+      "Senior Web Architect",
+      "VP of Engineering"
+    ],
+    "industry_sectors": [
+      "Digital Media",
+      "E-Commerce",
+      "Education",
+      "Enterprise Software"
+    ],
+    "learning_difficulty": "Moderate",
+    "roadmap_stages": [
+      {
+        "title": "Web Foundations & Responsive Layouts",
+        "duration": "Month 1-2",
+        "topics": [
+          "Semantic HTML",
+          "Flexbox & Grid",
+          "CSS Variables",
+          "Accessibility"
+        ],
+        "project": "Responsive University Portal"
+      },
+      {
+        "title": "Interactive JavaScript & APIs",
+        "duration": "Month 3-4",
+        "topics": [
+          "DOM Manipulation",
+          "Async/Await",
+          "Fetch API",
+          "Event Handling"
+        ],
+        "project": "Dynamic Weather & Career Search App"
+      },
+      {
+        "title": "Full Stack Integration & Production",
+        "duration": "Month 5-6",
+        "topics": [
+          "Flask/Node Backend",
+          "Database Connection",
+          "Git",
+          "Hosting"
+        ],
+        "project": "Full Stack Web Application"
+      }
+    ]
+  },
+  {
+    "id": "software-tester",
+    "title": "Software Tester / QA Engineer",
+    "category": "IT and Software Development",
+    "industry": "Software Engineering",
+    "minimum_education": "Bachelor's Degree in Computer Science, Information Systems, or Engineering",
+    "recommended_qualifications": "B.Tech, BCA, or Software Quality Assurance training",
+    "description": "Ensures software stability, performance, and compliance by designing manual and automated test suites, detecting regressions, and logging defects.",
+    "responsibilities": [
+      "Analyze software specifications and author comprehensive test plans and test cases",
+      "Execute manual functional, regression, integration, and user-acceptance testing",
+      "Develop automated test scripts using tools like Selenium, Playwright, or PyTest",
+      "Document, reproduce, and track software defects in collaboration with developers"
+    ],
+    "technical_skills": [
+      "Manual Testing",
+      "Test Automation",
+      "Selenium",
+      "PyTest",
+      "SQL",
+      "Jira",
+      "API Testing"
+    ],
+    "soft_skills": [
+      "Analytical Precision",
+      "Critical Thinking",
+      "Documentation",
+      "Tenacity"
+    ],
+    "courses": [
+      "Software Testing Methodologies",
+      "Automated QA with Python",
+      "API Testing with Postman"
+    ],
+    "certifications": [
+      "ISTQB Foundation Level Certified Tester",
+      "Certified Software Quality Analyst (CSQA)"
+    ],
+    "entrance_exams": [
+      "Standard graduation eligibility applies"
+    ],
+    "job_opportunities": [
+      "Software Development Firms",
+      "Fintech Institutions",
+      "Enterprise IT Services"
+    ],
+    "related_titles": [
+      "QA Analyst",
+      "Test Automation Engineer",
+      "Software Quality Engineer"
+    ],
+    "progression": [
+      "QA Analyst",
+      "Senior QA Engineer",
+      "Lead Test Architect",
+      "Head of Quality Assurance"
+    ],
+    "industry_sectors": [
+      "Fintech",
+      "Healthcare Software",
+      "Gaming",
+      "Enterprise SaaS"
+    ],
+    "learning_difficulty": "Moderate",
+    "roadmap_stages": [
+      {
+        "title": "Testing Fundamentals & Test Cases",
+        "duration": "Month 1-2",
+        "topics": [
+          "SDLC & STLC",
+          "Test Plan authoring",
+          "Bug reporting",
+          "Jira"
+        ],
+        "project": "Comprehensive Web Test Case Suite"
+      },
+      {
+        "title": "API & Database Validation",
+        "duration": "Month 3-4",
+        "topics": [
+          "Postman",
+          "HTTP methods",
+          "SQL verification",
+          "Boundary tests"
+        ],
+        "project": "E-Commerce API Validation Suite"
+      },
+      {
+        "title": "Test Automation & CI Integration",
+        "duration": "Month 5-6",
+        "topics": [
+          "Selenium/PyTest",
+          "Page Object Model",
+          "GitHub Actions CI"
+        ],
+        "project": "Automated End-to-End Regression Suite"
+      }
+    ]
+  },
+  {
+    "id": "mobile-app-developer",
+    "title": "Mobile App Developer",
+    "category": "IT and Software Development",
+    "industry": "Mobile Software",
+    "minimum_education": "Bachelor's Degree in Computer Science, IT, or equivalent experience",
+    "recommended_qualifications": "B.Tech/BCA or Mobile App Development Bootcamp",
+    "description": "Architects, creates, and maintains native or cross-platform mobile apps for Android and iOS devices.",
+    "responsibilities": [
+      "Develop native (Kotlin/Swift) or cross-platform (Flutter/React Native) mobile interfaces",
+      "Integrate mobile applications with cloud REST APIs and push notifications",
+      "Optimize app responsiveness, battery consumption, and offline storage",
+      "Package, test, and publish mobile applications to Google Play Store and Apple App Store"
+    ],
+    "technical_skills": [
+      "Flutter",
+      "React Native",
+      "Kotlin",
+      "Swift",
+      "REST APIs",
+      "SQLite",
+      "Firebase"
+    ],
+    "soft_skills": [
+      "Creative Problem Solving",
+      "User Experience Awareness",
+      "Teamwork"
+    ],
+    "courses": [
+      "Cross-Platform Mobile Development",
+      "Android Application Engineering",
+      "iOS Architecture"
+    ],
+    "certifications": [
+      "Google Associate Android Developer",
+      "Meta React Native Specialization"
+    ],
+    "entrance_exams": [
+      "Standard university admissions apply"
+    ],
+    "job_opportunities": [
+      "App Development Agencies",
+      "Tech Startups",
+      "Consumer Tech Enterprises"
+    ],
+    "related_titles": [
+      "Android Developer",
+      "iOS Developer",
+      "Flutter Engineer"
+    ],
+    "progression": [
+      "Junior Mobile Developer",
+      "Mobile Engineer",
+      "Lead Mobile Architect",
+      "Head of Mobile"
+    ],
+    "industry_sectors": [
+      "Consumer Tech",
+      "Fintech",
+      "HealthTech",
+      "Entertainment"
+    ],
+    "learning_difficulty": "Moderate",
+    "roadmap_stages": [
+      {
+        "title": "Mobile UI & Framework Basics",
+        "duration": "Month 1-2",
+        "topics": [
+          "Dart/Kotlin/JS",
+          "Component layout",
+          "Navigation",
+          "State management"
+        ],
+        "project": "Campus Event Tracker App"
+      },
+      {
+        "title": "API Integration & Local Storage",
+        "duration": "Month 3-4",
+        "topics": [
+          "REST APIs",
+          "Async storage",
+          "SQLite",
+          "Authentication"
+        ],
+        "project": "Personal Finance Tracker App"
+      },
+      {
+        "title": "Device Features & App Store Deployment",
+        "duration": "Month 5-6",
+        "topics": [
+          "Camera/Location APIs",
+          "Push notifications",
+          "Store publishing"
+        ],
+        "project": "Published Portfolio Mobile App"
+      }
+    ]
+  },
+  {
+    "id": "devops-engineer",
+    "title": "DevOps Engineer",
+    "category": "IT and Software Development",
+    "industry": "Cloud Infrastructure",
+    "minimum_education": "Bachelor's Degree in Computer Science, Information Technology, or Engineering",
+    "recommended_qualifications": "B.Tech/B.Sc IT with Linux and Networking fundamentals",
+    "description": "Bridges software engineering and system administration by building continuous integration/continuous deployment (CI/CD) pipelines, automating cloud infrastructure, and ensuring platform reliability.",
+    "responsibilities": [
+      "Author and optimize automated CI/CD deployment pipelines using GitHub Actions or GitLab",
+      "Containerize microservices using Docker and orchestrate clusters with Kubernetes",
+      "Manage cloud infrastructure as code (IaC) using Terraform or Ansible",
+      "Monitor server telemetry, logs, and uptime metrics using Prometheus and Grafana"
+    ],
+    "technical_skills": [
+      "Linux",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "AWS/GCP/Azure",
+      "Terraform",
+      "Git",
+      "Bash"
+    ],
+    "soft_skills": [
+      "Crisis Management",
+      "Systemic Thinking",
+      "Proactive Communication"
+    ],
+    "courses": [
+      "DevOps Foundations",
+      "Container Orchestration with Docker & Kubernetes",
+      "Infrastructure as Code"
+    ],
+    "certifications": [
+      "AWS Certified DevOps Engineer",
+      "Certified Kubernetes Administrator (CKA)"
+    ],
+    "entrance_exams": [
+      "Standard academic requirements apply"
+    ],
+    "job_opportunities": [
+      "Cloud Service Providers",
+      "SaaS Companies",
+      "E-Commerce Platforms",
+      "Fintech"
+    ],
+    "related_titles": [
+      "Site Reliability Engineer (SRE)",
+      "Cloud Engineer",
+      "Infrastructure Automation Engineer"
+    ],
+    "progression": [
+      "Junior DevOps Engineer",
+      "DevOps Engineer",
+      "Senior SRE",
+      "Director of Platform Engineering"
+    ],
+    "industry_sectors": [
+      "Cloud Computing",
+      "Fintech",
+      "Telecom",
+      "Enterprise Tech"
+    ],
+    "learning_difficulty": "Challenging",
+    "roadmap_stages": [
+      {
+        "title": "Linux, Networking & Shell Scripting",
+        "duration": "Month 1-2",
+        "topics": [
+          "Linux CLI",
+          "SSH",
+          "TCP/IP & DNS",
+          "Bash scripting",
+          "Git"
+        ],
+        "project": "Automated Server Health Checker"
+      },
+      {
+        "title": "Containers & CI/CD Pipelines",
+        "duration": "Month 3-4",
+        "topics": [
+          "Docker",
+          "Multi-stage builds",
+          "GitHub Actions CI",
+          "Artifact repos"
+        ],
+        "project": "Automated Microservice CI/CD Pipeline"
+      },
+      {
+        "title": "Kubernetes & Cloud Infrastructure as Code",
+        "duration": "Month 5-6",
+        "topics": [
+          "Kubernetes Pods/Services",
+          "Terraform",
+          "AWS basics",
+          "Monitoring"
+        ],
+        "project": "Multi-Tier Cloud Cluster Deployment"
+      }
+    ]
+  },
+  {
+    "id": "ai-ml-engineer",
+    "title": "AI/ML Engineer",
+    "category": "Artificial Intelligence and Machine Learning",
+    "industry": "Artificial Intelligence",
+    "minimum_education": "Bachelor's or Master's Degree in Computer Science, Data Science, Mathematics, or Engineering",
+    "recommended_qualifications": "B.Tech/M.Tech/M.Sc in CS, AI, or Quantitative Sciences",
+    "description": "Researches, trains, optimizes, and productionizes machine learning models, neural networks, and generative AI systems to solve complex cognitive tasks.",
+    "responsibilities": [
+      "Train, evaluate, and fine-tune supervised, unsupervised, and deep learning algorithms",
+      "Preprocess and engineer features from complex structured and unstructured datasets",
+      "Deploy AI models as low-latency microservices using Flask, FastAPI, or TorchServe",
+      "Monitor AI model drift, latency, and predictive reliability in production environments"
+    ],
+    "technical_skills": [
+      "Python",
+      "scikit-learn",
+      "PyTorch",
+      "TensorFlow",
+      "Pandas",
+      "Linear Algebra",
+      "REST APIs"
+    ],
+    "soft_skills": [
+      "Curiosity",
+      "Mathematical Intuition",
+      "Ethical AI Awareness",
+      "Experimental Rigor"
+    ],
+    "courses": [
+      "Machine Learning Specialization",
+      "Deep Learning Foundations",
+      "Production ML Systems (MLOps)"
+    ],
+    "certifications": [
+      "AWS Certified Machine Learning – Specialty",
+      "Google Professional Machine Learning Engineer"
+    ],
+    "entrance_exams": [
+      "Standard graduate entrance examinations apply for advanced university degrees"
+    ],
+    "job_opportunities": [
+      "AI Research Labs",
+      "Autonomous Vehicle Firms",
+      "Healthcare AI Startups",
+      "Tech Conglomerates"
+    ],
+    "related_titles": [
+      "Machine Learning Engineer",
+      "Deep Learning Specialist",
+      "AI Developer"
+    ],
+    "progression": [
+      "Junior ML Engineer",
+      "AI/ML Engineer",
+      "Senior AI Scientist",
+      "Head of AI Research"
+    ],
+    "industry_sectors": [
+      "Artificial Intelligence",
+      "Autonomous Systems",
+      "Healthcare",
+      "Finance"
+    ],
+    "learning_difficulty": "Challenging",
+    "roadmap_stages": [
+      {
+        "title": "Applied Math & Machine Learning Core",
+        "duration": "Month 1-2",
+        "topics": [
+          "Linear Algebra",
+          "Calculus",
+          "Probability",
+          "scikit-learn",
+          "Model evaluation"
+        ],
+        "project": "Predictive Student Attrition Model"
+      },
+      {
+        "title": "Deep Learning & Neural Architectures",
+        "duration": "Month 3-4",
+        "topics": [
+          "PyTorch",
+          "CNNs",
+          "RNNs/Transformers",
+          "Transfer Learning"
+        ],
+        "project": "Image Classification & Detection App"
+      },
+      {
+        "title": "Model Serving & MLOps Deployment",
+        "duration": "Month 5-6",
+        "topics": [
+          "FastAPI",
+          "Docker",
+          "Model registry",
+          "Model monitoring"
+        ],
+        "project": "Production AI Career Recommendation API"
+      }
+    ]
+  },
+  {
+    "id": "nlp-engineer",
+    "title": "NLP Engineer",
+    "category": "Artificial Intelligence and Machine Learning",
+    "industry": "Artificial Intelligence",
+    "minimum_education": "Bachelor's or Master's Degree in Computer Science, Linguistics, or Data Science",
+    "recommended_qualifications": "Background in Computational Linguistics, NLP, or Deep Learning",
+    "description": "Develops computational algorithms and language models that interpret, generate, translate, and analyze human speech and text.",
+    "responsibilities": [
+      "Build and fine-tune Large Language Models (LLMs) and transformer architectures (BERT, GPT, T5)",
+      "Perform text tokenization, embeddings generation, named entity recognition, and sentiment classification",
+      "Implement Retrieval-Augmented Generation (RAG) pipelines using vector databases",
+      "Optimize latency and quantization of language model inferences"
+    ],
+    "technical_skills": [
+      "Python",
+      "Hugging Face",
+      "PyTorch",
+      "Transformers",
+      "LangChain",
+      "Vector DBs (Chroma/FAISS)",
+      "NLTK"
+    ],
+    "soft_skills": [
+      "Linguistic Curiosity",
+      "Attention to Nuance",
+      "Ethical AI Principles"
+    ],
+    "courses": [
+      "Natural Language Processing with Transformers",
+      "Generative AI Engineering with LLMs"
+    ],
+    "certifications": [
+      "DeepLearning.AI NLP Specialization",
+      "Hugging Face NLP Certification"
+    ],
+    "entrance_exams": [
+      "University entrance criteria for CS/AI graduate studies"
+    ],
+    "job_opportunities": [
+      "Search Engine Companies",
+      "Virtual Assistant Creators",
+      "EdTech Enterprises",
+      "Legal AI Labs"
+    ],
+    "related_titles": [
+      "Natural Language Processing Specialist",
+      "Generative AI Engineer",
+      "Computational Linguist"
+    ],
+    "progression": [
+      "Junior NLP Engineer",
+      "NLP Research Engineer",
+      "Lead Language Technologist",
+      "Principal AI Architect"
+    ],
+    "industry_sectors": [
+      "Language Technology",
+      "Customer Support Automation",
+      "Legal Tech",
+      "Healthcare"
+    ],
+    "learning_difficulty": "Challenging",
+    "roadmap_stages": [
+      {
+        "title": "Text Processing & Classic NLP",
+        "duration": "Month 1-2",
+        "topics": [
+          "Regular expressions",
+          "TF-IDF",
+          "Word2Vec",
+          "SpaCy",
+          "Classification"
+        ],
+        "project": "Automated Resume Classifier"
+      },
+      {
+        "title": "Transformers & Hugging Face",
+        "duration": "Month 3-4",
+        "topics": [
+          "Attention mechanisms",
+          "BERT",
+          "Fine-tuning",
+          "Question answering"
+        ],
+        "project": "Academic Question Answering System"
+      },
+      {
+        "title": "LLMs, RAG Pipelines & Vector Databases",
+        "duration": "Month 5-6",
+        "topics": [
+          "LangChain",
+          "Vector embeddings",
+          "ChromaDB",
+          "LLM Evaluation"
+        ],
+        "project": "RAG-Powered Career Advisor Bot"
+      }
+    ]
+  },
+  {
+    "id": "data-analyst",
+    "title": "Data Analyst",
+    "category": "Data Science and Analytics",
+    "industry": "Data & Analytics",
+    "minimum_education": "Bachelor's Degree in Mathematics, Statistics, Economics, Computer Science, or Business",
+    "recommended_qualifications": "B.Sc/B.Tech/B.Com or Analytics Specialization",
+    "description": "Extracts, inspects, cleans, and analyzes organizational data to discover meaningful trends, produce actionable intelligence, and drive executive decision-making.",
+    "responsibilities": [
+      "Author complex SQL queries to extract and aggregate multi-table datasets",
+      "Clean, transform, and validate messy datasets using Python (Pandas) or Excel",
+      "Design dynamic interactive dashboards in Power BI or Tableau",
+      "Present statistical summaries and business recommendations to non-technical stakeholders"
+    ],
+    "technical_skills": [
+      "SQL",
+      "Excel",
+      "Python (Pandas, NumPy)",
+      "Power BI / Tableau",
+      "Descriptive Statistics",
+      "Data Storytelling"
+    ],
+    "soft_skills": [
+      "Business Acumen",
+      "Visual Storytelling",
+      "Communication",
+      "Critical Questioning"
+    ],
+    "courses": [
+      "Google Data Analytics Professional Certificate",
+      "SQL for Business Intelligence",
+      "Python for Data Analysis"
+    ],
+    "certifications": [
+      "Microsoft Certified: Power BI Data Analyst Associate",
+      "Google Data Analytics Certificate"
+    ],
+    "entrance_exams": [
+      "Admissions vary by degree program; no mandatory single exam"
+    ],
+    "job_opportunities": [
+      "Retail & E-Commerce",
+      "Banking & Financial Services",
+      "Consulting Firms",
+      "Healthcare Systems"
+    ],
+    "related_titles": [
+      "Business Intelligence Analyst",
+      "Analytics Specialist",
+      "Operations Analyst"
+    ],
+    "progression": [
+      "Junior Data Analyst",
+      "Data Analyst",
+      "Senior Business Intelligence Specialist",
+      "Analytics Manager"
+    ],
+    "industry_sectors": [
+      "Finance",
+      "Retail",
+      "Healthcare",
+      "Consulting",
+      "Government"
+    ],
+    "learning_difficulty": "Moderate",
+    "roadmap_stages": [
+      {
+        "title": "Spreadsheets & Advanced SQL",
+        "duration": "Month 1-2",
+        "topics": [
+          "VLOOKUP/XLOOKUP",
+          "Pivot Tables",
+          "SQL Joins",
+          "Aggregations",
+          "Window Functions"
+        ],
+        "project": "University Enrollment Analysis Report"
+      },
+      {
+        "title": "Python for Data Cleaning & EDA",
+        "duration": "Month 3-4",
+        "topics": [
+          "Pandas",
+          "Matplotlib/Seaborn",
+          "Missing data handling",
+          "Correlation"
+        ],
+        "project": "Global Salary and Employment Trends EDA"
+      },
+      {
+        "title": "Business Intelligence Dashboards",
+        "duration": "Month 5-6",
+        "topics": [
+          "Power BI / Tableau",
+          "DAX",
+          "Data modeling",
+          "Executive presentations"
+        ],
+        "project": "Interactive Enterprise Executive Dashboard"
+      }
+    ]
+  },
+  {
+    "id": "data-scientist",
+    "title": "Data Scientist",
+    "category": "Data Science and Analytics",
+    "industry": "Data Science",
+    "minimum_education": "Bachelor's or Master's Degree in Statistics, Mathematics, Computer Science, or Physics",
+    "recommended_qualifications": "B.Tech/M.Sc/Ph.D. in quantitative or computational sciences",
+    "description": "Applies rigorous statistical modeling, predictive algorithms, and experimental design to extract deep insights and solve complex business problems from large datasets.",
+    "responsibilities": [
+      "Formulate predictive hypotheses and design rigorous A/B experiments",
+      "Develop end-to-end predictive machine learning pipelines (regression, classification, clustering)",
+      "Conduct deep exploratory data analysis and feature engineering on high-dimensional data",
+      "Synthesize complex predictive modeling results into actionable strategic insights"
+    ],
+    "technical_skills": [
+      "Python",
+      "R",
+      "SQL",
+      "scikit-learn",
+      "Statistical Hypothesis Testing",
+      "Pandas",
+      "Feature Engineering"
+    ],
+    "soft_skills": [
+      "Scientific Methodology",
+      "Hypothesis Formulation",
+      "Curiosity",
+      "Strategic Thinking"
+    ],
+    "courses": [
+      "Applied Data Science with Python",
+      "Statistical Inference & Modeling",
+      "Machine Learning Practical Engineering"
+    ],
+    "certifications": [
+      "IBM Data Science Professional Certificate",
+      "Open Certified Data Scientist (Open CDS)"
+    ],
+    "entrance_exams": [
+      "Standard university graduate entrance examinations apply where required"
+    ],
+    "job_opportunities": [
+      "Fintech Enterprises",
+      "E-Commerce Giants",
+      "Pharmaceutical R&D",
+      "Logistics Networks"
+    ],
+    "related_titles": [
+      "Quantitative Analyst",
+      "Machine Learning Scientist",
+      "Applied Statistician"
+    ],
+    "progression": [
+      "Junior Data Scientist",
+      "Data Scientist",
+      "Lead Data Scientist",
+      "Chief Data Officer (CDO)"
+    ],
+    "industry_sectors": [
+      "Tech",
+      "Pharmaceuticals",
+      "Financial Modeling",
+      "E-Commerce"
+    ],
+    "learning_difficulty": "Challenging",
+    "roadmap_stages": [
+      {
+        "title": "Probability & Inferential Statistics",
+        "duration": "Month 1-2",
+        "topics": [
+          "Distributions",
+          "p-values",
+          "Confidence intervals",
+          "A/B testing",
+          "NumPy/Pandas"
+        ],
+        "project": "Statistical A/B Test Analysis Framework"
+      },
+      {
+        "title": "Supervised & Unsupervised Machine Learning",
+        "duration": "Month 3-4",
+        "topics": [
+          "Regression",
+          "Random Forests",
+          "Gradient Boosting",
+          "K-Means",
+          "PCA"
+        ],
+        "project": "Customer Churn Prediction Engine"
+      },
+      {
+        "title": "End-to-End Data Science Project & Storytelling",
+        "duration": "Month 5-6",
+        "topics": [
+          "Model explainability (SHAP)",
+          "Pipelines",
+          "Streamlit",
+          "Stakeholder deck"
+        ],
+        "project": "Comprehensive Data Science Web App"
+      }
+    ]
+  },
+  {
+    "id": "cybersecurity-analyst",
+    "title": "Cybersecurity Analyst",
+    "category": "Cybersecurity and Cloud Computing",
+    "industry": "Information Security",
+    "minimum_education": "Bachelor's Degree in Cybersecurity, Computer Science, Information Systems, or Engineering",
+    "recommended_qualifications": "B.Tech/B.Sc IT or Certified Ethical Hacker credentials",
+    "description": "Monitors network traffic, investigates security incidents, assesses system vulnerabilities, and safeguards digital infrastructure against cyber threats.",
+    "responsibilities": [
+      "Monitor network traffic and security alerts using SIEM tools (Splunk, Sentinel)",
+      "Analyze malware indicators, phishing campaigns, and unauthorized access attempts",
+      "Perform vulnerability assessments, port scanning, and security patch audits",
+      "Author incident response reports and enforce organizational security policies"
+    ],
+    "technical_skills": [
+      "Network Security",
+      "SIEM (Splunk)",
+      "Wireshark",
+      "Linux",
+      "Firewalls",
+      "Vulnerability Assessment",
+      "Python/Bash"
+    ],
+    "soft_skills": [
+      "Vigilance",
+      "Coolness under Pressure",
+      "Ethics",
+      "Investigative Persistence"
+    ],
+    "courses": [
+      "CompTIA Security+ Exam Prep",
+      "Practical Ethical Hacking",
+      "SOC Analyst Foundations"
+    ],
+    "certifications": [
+      "CompTIA Security+",
+      "Certified Information Systems Security Professional (CISSP)",
+      "CEH (Certified Ethical Hacker)"
+    ],
+    "entrance_exams": [
+      "Admissions follow standard college requirements"
+    ],
+    "job_opportunities": [
+      "Security Operations Centers (SOC)",
+      "Banking Institutions",
+      "Government Security Agencies",
+      "Consulting"
+    ],
+    "related_titles": [
+      "Information Security Analyst",
+      "SOC Analyst",
+      "Vulnerability Assessor"
+    ],
+    "progression": [
+      "Tier 1 SOC Analyst",
+      "Cybersecurity Specialist",
+      "Incident Response Lead",
+      "Chief Information Security Officer (CISO)"
+    ],
+    "industry_sectors": [
+      "Defense",
+      "Banking & Finance",
+      "Healthcare Infrastructure",
+      "Government"
+    ],
+    "learning_difficulty": "Challenging",
+    "roadmap_stages": [
+      {
+        "title": "Networking & Operating System Security",
+        "duration": "Month 1-2",
+        "topics": [
+          "OSI Model",
+          "TCP/IP",
+          "Wireshark packet capture",
+          "Linux permissions",
+          "Firewalls"
+        ],
+        "project": "Home Lab Network Packet Analysis"
+      },
+      {
+        "title": "Vulnerability Assessment & Threat Detection",
+        "duration": "Month 3-4",
+        "topics": [
+          "Nmap",
+          "CVE databases",
+          "SIEM tools",
+          "Phishing analysis",
+          "Log auditing"
+        ],
+        "project": "Vulnerability Assessment & Mitigation Report"
+      },
+      {
+        "title": "Incident Response & Defensive Hardening",
+        "duration": "Month 5-6",
+        "topics": [
+          "Incident response playbooks",
+          "Host forensics",
+          "Hardening guides",
+          "Security policy"
+        ],
+        "project": "Simulated Incident Response Case Study"
+      }
+    ]
+  },
+  {
+    "id": "cloud-architect",
+    "title": "Cloud Solutions Architect",
+    "category": "Cybersecurity and Cloud Computing",
+    "industry": "Cloud Computing",
+    "minimum_education": "Bachelor's Degree in Computer Science, Computer Engineering, or Information Systems",
+    "recommended_qualifications": "B.Tech with AWS/Azure/GCP cloud architect certifications",
+    "description": "Plans, designs, and governs resilient, cost-effective, and highly available enterprise cloud computing architectures.",
+    "responsibilities": [
+      "Design highly available, fault-tolerant, and secure multi-cloud architectures",
+      "Migrate legacy on-premise workloads to public cloud platforms (AWS, Azure, Google Cloud)",
+      "Implement cloud governance, role-based access control (IAM), and encryption mechanisms",
+      "Optimize cloud spending through right-sizing, reserved instances, and serverless architectures"
+    ],
+    "technical_skills": [
+      "AWS",
+      "Microsoft Azure",
+      "Google Cloud",
+      "Cloud Networking (VPC)",
+      "IAM",
+      "Terraform",
+      "Serverless"
+    ],
+    "soft_skills": [
+      "Strategic Vision",
+      "Executive Communication",
+      "Risk Management",
+      "Negotiation"
+    ],
+    "courses": [
+      "AWS Certified Solutions Architect Course",
+      "Enterprise Cloud Architecture Design"
+    ],
+    "certifications": [
+      "AWS Certified Solutions Architect – Professional",
+      "Microsoft Certified: Azure Solutions Architect Expert"
+    ],
+    "entrance_exams": [
+      "Standard university degree prerequisites apply"
+    ],
+    "job_opportunities": [
+      "Cloud Consultancies",
+      "Global Tech Enterprises",
+      "Financial Institutions",
+      "Healthcare Clouds"
+    ],
+    "related_titles": [
+      "Enterprise Cloud Architect",
+      "Infrastructure Architect",
+      "Cloud Consultant"
+    ],
+    "progression": [
+      "Cloud Engineer",
+      "Senior Cloud Architect",
+      "Principal Infrastructure Architect",
+      "VP of Cloud Engineering"
+    ],
+    "industry_sectors": [
+      "Enterprise Tech",
+      "Financial Services",
+      "Telecommunications",
+      "Public Sector"
+    ],
+    "learning_difficulty": "Advanced",
+    "roadmap_stages": [
+      {
+        "title": "Cloud Fundamentals & Core Services",
+        "duration": "Month 1-2",
+        "topics": [
+          "Compute (EC2/VMs)",
+          "Storage (S3/Blob)",
+          "Virtual Private Clouds (VPC)",
+          "Security Groups",
+          "IAM"
+        ],
+        "project": "Secure Multi-Tier Web Architecture on Cloud"
+      },
+      {
+        "title": "High Availability & Databases",
+        "duration": "Month 3-4",
+        "topics": [
+          "Auto-scaling",
+          "Load balancers",
+          "Managed SQL/NoSQL databases",
+          "DNS/CDN"
+        ],
+        "project": "Fault-Tolerant High-Traffic Cloud System"
+      },
+      {
+        "title": "Cost Optimization & Cloud Governance",
+        "duration": "Month 5-6",
+        "topics": [
+          "Disaster recovery",
+          "Terraform IaC",
+          "Compliance standards",
+          "Cost auditing"
+        ],
+        "project": "Complete Enterprise Cloud Migration Strategy"
+      }
+    ]
+  },
+  {
+    "id": "mechanical-engineer",
+    "title": "Mechanical Engineer",
+    "category": "Engineering",
+    "industry": "Industrial Engineering",
+    "minimum_education": "Bachelor's Degree in Mechanical Engineering (B.E. / B.Tech)",
+    "recommended_qualifications": "B.Tech/B.E. in Mechanical Engineering with CAD/FEA proficiency",
+    "description": "Researches, conceives, designs, tests, and manufactures physical tools, mechanical engines, thermal systems, and automated machinery.",
+    "responsibilities": [
+      "Create detailed 2D and 3D computer-aided designs (CAD) of mechanical components",
+      "Conduct finite element analysis (FEA) and thermodynamic calculations on assemblies",
+      "Select appropriate manufacturing materials and evaluate structural stress tolerance",
+      "Collaborate with manufacturing teams to oversee fabrication, tooling, and quality control"
+    ],
+    "technical_skills": [
+      "SolidWorks",
+      "AutoCAD",
+      "ANSYS / FEA",
+      "Thermodynamics",
+      "Materials Science",
+      "GD&T",
+      "Manufacturing Processes"
+    ],
+    "soft_skills": [
+      "Spatial Reasoning",
+      "Practical Problem Solving",
+      "Safety Orientation",
+      "Team Leadership"
+    ],
+    "courses": [
+      "Advanced Computer-Aided Mechanical Design",
+      "Thermodynamic & Fluid Systems",
+      "Finite Element Analysis"
+    ],
+    "certifications": [
+      "CSWA / CSWP (SolidWorks Certification)",
+      "Licensed Professional Engineer (PE) credential where applicable"
+    ],
+    "entrance_exams": [
+      "National and regional engineering entrance examinations (e.g. JEE, state CETs, or equivalent national exams)"
+    ],
+    "job_opportunities": [
+      "Automotive Companies",
+      "Aerospace Manufacturers",
+      "Robotics Firms",
+      "Heavy Machinery Enterprises"
+    ],
+    "related_titles": [
+      "Design Engineer",
+      "Mechanical Systems Engineer",
+      "Thermal Engineer"
+    ],
+    "progression": [
+      "Junior Mechanical Engineer",
+      "Mechanical Design Engineer",
+      "Lead Systems Engineer",
+      "Engineering Plant Director"
+    ],
+    "industry_sectors": [
+      "Automotive",
+      "Aerospace",
+      "Energy",
+      "Heavy Manufacturing"
+    ],
+    "learning_difficulty": "Challenging",
+    "roadmap_stages": [
+      {
+        "title": "Engineering Mechanics & CAD Fundamentals",
+        "duration": "Month 1-2",
+        "topics": [
+          "Statics & Dynamics",
+          "Strength of Materials",
+          "AutoCAD drafting",
+          "Part modeling in SolidWorks"
+        ],
+        "project": "Mechanical Gearbox CAD Design"
+      },
+      {
+        "title": "Simulation, FEA & Thermodynamics",
+        "duration": "Month 3-4",
+        "topics": [
+          "Stress analysis in ANSYS",
+          "Thermal fluid loops",
+          "Material failure theories",
+          "GD&T"
+        ],
+        "project": "Structural Stress Simulation Case Study"
+      },
+      {
+        "title": "Manufacturing & Prototype Fabrication",
+        "duration": "Month 5-6",
+        "topics": [
+          "CNC machining basics",
+          "3D Printing/Rapid prototyping",
+          "Design for Assembly (DFA)"
+        ],
+        "project": "Functional Mechanical Prototype Model"
+      }
+    ]
+  },
+  {
+    "id": "civil-engineer",
+    "title": "Civil Engineer",
+    "category": "Engineering",
+    "industry": "Infrastructure & Construction",
+    "minimum_education": "Bachelor's Degree in Civil Engineering (B.E. / B.Tech)",
+    "recommended_qualifications": "B.Tech/B.E. in Civil Engineering",
+    "description": "Plans, designs, supervises, and coordinates the construction and maintenance of building structures, transportation networks, bridges, and municipal infrastructure.",
+    "responsibilities": [
+      "Perform structural calculations, soil load evaluations, and site surveys",
+      "Develop blueprint schematics and engineering specifications using AutoCAD Civil 3D and STAAD.Pro",
+      "Ensure construction compliance with regional building safety codes and environmental regulations",
+      "Monitor on-site construction progress, material quality, and contractor safety standards"
+    ],
+    "technical_skills": [
+      "AutoCAD Civil 3D",
+      "STAAD.Pro",
+      "Revit",
+      "Structural Analysis",
+      "Geotechnical Engineering",
+      "Surveying"
+    ],
+    "soft_skills": [
+      "Project Coordination",
+      "Public Safety Mindfulness",
+      "Environmental Ethics",
+      "Budgeting"
+    ],
+    "courses": [
+      "Structural Engineering Analysis",
+      "Geotechnical & Soil Mechanics",
+      "Construction Project Management"
+    ],
+    "certifications": [
+      "AutoCAD Civil 3D Professional",
+      "Project Management Professional (PMP)",
+      "Licensed Professional Engineer (PE)"
+    ],
+    "entrance_exams": [
+      "Engineering entrance exams (e.g., JEE, regional state engineering tests)"
+    ],
+    "job_opportunities": [
+      "Government Public Works Departments",
+      "Infrastructure Contractors",
+      "Urban Planning Firms",
+      "Engineering Consultancies"
+    ],
+    "related_titles": [
+      "Structural Engineer",
+      "Site Construction Engineer",
+      "Transportation Infrastructure Engineer"
+    ],
+    "progression": [
+      "Site Engineer",
+      "Assistant Project Manager",
+      "Lead Structural Engineer",
+      "Chief Infrastructure Officer"
+    ],
+    "industry_sectors": [
+      "Civil Construction",
+      "Transportation",
+      "Urban Development",
+      "Water Resources"
+    ],
+    "learning_difficulty": "Challenging",
+    "roadmap_stages": [
+      {
+        "title": "Structural Principles & Drafting",
+        "duration": "Month 1-2",
+        "topics": [
+          "Structural mechanics",
+          "Building materials",
+          "AutoCAD 2D/3D drafting",
+          "Surveying"
+        ],
+        "project": "Residential Building Structural Blueprint"
+      },
+      {
+        "title": "Computer-Aided Structural Analysis",
+        "duration": "Month 3-4",
+        "topics": [
+          "STAAD.Pro modeling",
+          "Reinforced concrete design",
+          "Soil bearing capacity",
+          "Wind/Seismic loads"
+        ],
+        "project": "Multi-Story Frame Structural Analysis"
+      },
+      {
+        "title": "Site Project Management & Quantity Estimation",
+        "duration": "Month 5-6",
+        "topics": [
+          "BOQ estimation",
+          "Construction scheduling",
+          "Safety codes",
+          "Tender documentation"
+        ],
+        "project": "Complete Civil Project Execution Plan"
+      }
+    ]
+  },
+  {
+    "id": "robotics-engineer",
+    "title": "Robotics Engineer",
+    "category": "Engineering",
+    "industry": "Robotics & Automation",
+    "minimum_education": "Bachelor's Degree in Mechatronics, Robotics, Electrical, Mechanical, or Computer Engineering",
+    "recommended_qualifications": "B.Tech/M.Tech in Robotics, Mechatronics, or Embedded Systems",
+    "description": "Synthesizes mechanical, electrical, and computer software disciplines to design, build, and program autonomous robotic systems and industrial manipulators.",
+    "responsibilities": [
+      "Design kinematics and electromechanical actuation systems for robotic hardware",
+      "Program embedded microcontrollers and microprocessors using C++ and Python",
+      "Implement real-time sensor integration (LiDAR, ultrasonic, computer vision) using ROS (Robot Operating System)",
+      "Test, calibrate, and debug autonomous path planning and obstacle avoidance algorithms"
+    ],
+    "technical_skills": [
+      "ROS / ROS 2",
+      "C++",
+      "Python",
+      "Kinematics & Dynamics",
+      "Microcontrollers (Arduino, STM32)",
+      "Computer Vision (OpenCV)",
+      "Circuit Design"
+    ],
+    "soft_skills": [
+      "Interdisciplinary Thinking",
+      "Perseverance",
+      "Systemic Troubleshooting"
+    ],
+    "courses": [
+      "Modern Robotics Mechanics and Control",
+      "Robot Operating System (ROS) Programming",
+      "Autonomous Mobile Robots"
+    ],
+    "certifications": [
+      "ROS Developer Certificate",
+      "Certified Automation Professional (CAP)"
+    ],
+    "entrance_exams": [
+      "Engineering admissions tests"
+    ],
+    "job_opportunities": [
+      "Industrial Automation Firms",
+      "Autonomous Vehicle Companies",
+      "Medical Robotics Makers",
+      "Warehouse Robotics"
+    ],
+    "related_titles": [
+      "Mechatronics Engineer",
+      "Automation Engineer",
+      "Robotic Perception Specialist"
+    ],
+    "progression": [
+      "Junior Robotics Engineer",
+      "Robotics Software/Hardware Engineer",
+      "Lead Roboticist",
+      "Director of Automation"
+    ],
+    "industry_sectors": [
+      "Industrial Automation",
+      "Healthcare Tech",
+      "Logistics",
+      "Defense"
+    ],
+    "learning_difficulty": "Advanced",
+    "roadmap_stages": [
+      {
+        "title": "Electromechanics & Embedded C++",
+        "duration": "Month 1-2",
+        "topics": [
+          "Microcontrollers",
+          "Sensors & Actuators",
+          "Motor drivers",
+          "C++ for robotics"
+        ],
+        "project": "Sensor-Guided Obstacle-Avoiding Mobile Robot"
+      },
+      {
+        "title": "ROS & Robotic Kinematics",
+        "duration": "Month 3-4",
+        "topics": [
+          "ROS 2 nodes & topics",
+          "Forward & inverse kinematics",
+          "Gazebo simulation",
+          "URDF"
+        ],
+        "project": "Simulated 4-Axis Robotic Arm Controller"
+      },
+      {
+        "title": "Autonomous Navigation & Computer Vision",
+        "duration": "Month 5-6",
+        "topics": [
+          "SLAM algorithms",
+          "OpenCV object tracking",
+          "Path planning (A*/Dijkstra)"
+        ],
+        "project": "Autonomous SLAM-Based Warehouse Rover"
+      }
+    ]
+  },
+  {
+    "id": "medical-doctor",
+    "title": "Doctor / Physician",
+    "category": "Medical and Healthcare",
+    "industry": "Healthcare",
+    "minimum_education": "MBBS / MD / DO or equivalent national medical degree",
+    "recommended_qualifications": "Recognized medical degree with residency/internship completion and valid medical registration",
+    "description": "Diagnoses, treats, and helps prevent illnesses, disorders, and physical injuries through medical examination, diagnostic interpretation, and clinical management.",
+    "responsibilities": [
+      "Conduct comprehensive clinical patient evaluations, history taking, and physical examinations",
+      "Order and interpret medical diagnostic tests (blood panels, radiographs, electrocardiograms)",
+      "Formulate and manage personalized medical treatment plans and medication regimens",
+      "Counsel patients and families regarding preventive healthcare and chronic disease management"
+    ],
+    "technical_skills": [
+      "Clinical Diagnosis",
+      "Pharmacology",
+      "Patient Care Protocols",
+      "Medical Records (EHR)",
+      "Emergency Triage",
+      "Diagnostic Interpretation"
+    ],
+    "soft_skills": [
+      "Empathy",
+      "Active Listening",
+      "High Emotional Resilience",
+      "Decisiveness",
+      "Ethical Integrity"
+    ],
+    "courses": [
+      "Human Anatomy & Physiology",
+      "Pathology & Pharmacology",
+      "Internal Medicine Clinical Clerkships"
+    ],
+    "certifications": [
+      "Medical Council/Board License to Practice",
+      "Advanced Cardiac Life Support (ACLS)",
+      "Basic Life Support (BLS)"
+    ],
+    "entrance_exams": [
+      "National medical entrance examination (e.g. NEET-UG in India, MCAT in US/Canada, UKCAT/BMAT in UK; varies by country)"
+    ],
+    "job_opportunities": [
+      "Hospitals & Medical Centers",
+      "Community Health Clinics",
+      "Private Medical Practices",
+      "Academic Medical Centers"
+    ],
+    "related_titles": [
+      "General Practitioner",
+      "Medical Officer",
+      "Resident Physician",
+      "Consultant Doctor"
+    ],
+    "progression": [
+      "Medical Intern",
+      "Resident Medical Officer",
+      "Specialist Physician",
+      "Chief of Medical Staff"
+    ],
+    "industry_sectors": [
+      "Healthcare Delivery",
+      "Clinical Medicine",
+      "Public Health",
+      "Medical Research"
+    ],
+    "learning_difficulty": "Advanced",
+    "roadmap_stages": [
+      {
+        "title": "Pre-Clinical Sciences & Fundamentals",
+        "duration": "Year 1-2",
+        "topics": [
+          "Human Anatomy",
+          "Medical Biochemistry",
+          "Physiology",
+          "Basic pathology"
+        ],
+        "project": "Case Study on Cardiovascular Physiology"
+      },
+      {
+        "title": "Para-Clinical & Pharmacology Study",
+        "duration": "Year 3-4",
+        "topics": [
+          "Clinical Pharmacology",
+          "Microbiology",
+          "Forensic Medicine",
+          "Preventive Healthcare"
+        ],
+        "project": "Community Health Epidemiological Survey"
+      },
+      {
+        "title": "Clinical Clerkship & Internship",
+        "duration": "Year 5+",
+        "topics": [
+          "Internal Medicine",
+          "Surgery rotations",
+          "Pediatrics & Obstetrics",
+          "Patient management"
+        ],
+        "project": "Supervised Clinical Patient Management Portfolio"
+      }
+    ]
+  },
+  {
+    "id": "clinical-pharmacist",
+    "title": "Clinical Pharmacist",
+    "category": "Medical and Healthcare",
+    "industry": "Pharmaceutical Healthcare",
+    "minimum_education": "Bachelor of Pharmacy (B.Pharm) or Doctor of Pharmacy (Pharm.D)",
+    "recommended_qualifications": "B.Pharm / Pharm.D with state or national pharmacy council licensure",
+    "description": "Prepares and dispenses prescription medications, evaluates drug interactions, counsels patients, and collaborates with physicians to ensure optimal pharmacotherapy.",
+    "responsibilities": [
+      "Review prescription orders for clinical appropriateness, dosage accuracy, and contraindications",
+      "Monitor patient medication therapies for adverse drug reactions and efficacy",
+      "Counsel patients regarding proper dosage, administration instructions, and side effects",
+      "Maintain controlled substance inventories according to statutory health standards"
+    ],
+    "technical_skills": [
+      "Pharmacotherapy",
+      "Drug Interaction Screening",
+      "Pharmaceutical Compounding",
+      "Toxicology",
+      "Inventory Systems"
+    ],
+    "soft_skills": [
+      "Meticulous Precision",
+      "Interpersonal Communication",
+      "Compassion",
+      "Integrity"
+    ],
+    "courses": [
+      "Medicinal Chemistry",
+      "Clinical Biopharmaceutics",
+      "Hospital & Community Pharmacy"
+    ],
+    "certifications": [
+      "Registered Pharmacist License (R.Ph)",
+      "Board Certified Pharmacotherapy Specialist (BCPS)"
+    ],
+    "entrance_exams": [
+      "Pharmacy entrance examinations or university science admission tests"
+    ],
+    "job_opportunities": [
+      "Hospital Pharmacies",
+      "Community Pharmacies",
+      "Pharmaceutical R&D Labs",
+      "Clinical Research Organizations"
+    ],
+    "related_titles": [
+      "Hospital Pharmacist",
+      "Dispensing Pharmacist",
+      "Medical Affairs Specialist"
+    ],
+    "progression": [
+      "Staff Pharmacist",
+      "Clinical Specialist",
+      "Pharmacy Manager",
+      "Director of Pharmacy Operations"
+    ],
+    "industry_sectors": [
+      "Pharmaceuticals",
+      "Healthcare Delivery",
+      "Clinical Trials",
+      "Regulatory Affairs"
+    ],
+    "learning_difficulty": "Challenging",
+    "roadmap_stages": [
+      {
+        "title": "Pharmaceutical Sciences Core",
+        "duration": "Month 1-2",
+        "topics": [
+          "Organic & Medicinal Chemistry",
+          "Human Anatomy",
+          "Drug formulations",
+          "Dosage forms"
+        ],
+        "project": "Formulation Stability Study Review"
+      },
+      {
+        "title": "Pharmacology & Therapeutics",
+        "duration": "Month 3-4",
+        "topics": [
+          "Mechanism of action",
+          "Drug-drug interactions",
+          "Clinical pharmacokinetics",
+          "Toxicology"
+        ],
+        "project": "Chronic Disease Pharmacotherapy Case Assessment"
+      },
+      {
+        "title": "Hospital Pharmacy Practice & Licensure",
+        "duration": "Month 5-6",
+        "topics": [
+          "Patient counseling",
+          "Pharmacy laws & ethics",
+          "Prescription auditing",
+          "Licensing exam prep"
+        ],
+        "project": "Hospital Formulary & Patient Counseling Guide"
+      }
+    ]
+  },
+  {
+    "id": "chartered-accountant",
+    "title": "Chartered Accountant (CA) / CPA",
+    "category": "Commerce, Accounting and Finance",
+    "industry": "Accounting & Audit",
+    "minimum_education": "Bachelor's Degree in Commerce/Accounting and professional accounting institute qualification",
+    "recommended_qualifications": "B.Com / BBA + ICAI (CA) / ACCA / CPA certification",
+    "description": "Performs statutory financial audits, advises organizations on corporate taxation, ensures regulatory compliance, and structures corporate accounting systems.",
+    "responsibilities": [
+      "Conduct financial audits to verify statutory compliance with accounting standards (IFRS / GAAP)",
+      "Calculate corporate tax liabilities and author official tax return filings",
+      "Analyze financial statements, cash flows, and balance sheets for discrepancies",
+      "Advise executives on financial restructuring, capital budgeting, and internal controls"
+    ],
+    "technical_skills": [
+      "Financial Auditing",
+      "Corporate Taxation",
+      "IFRS & GAAP",
+      "Financial Reporting",
+      "ERP Systems (SAP/Tally)",
+      "Advanced Excel"
+    ],
+    "soft_skills": [
+      "Uncompromising Ethics",
+      "Analytical Rigor",
+      "Commercial Acumen",
+      "Client Relationship Management"
+    ],
+    "courses": [
+      "Advanced Financial Accounting",
+      "Corporate Law & Taxation",
+      "Statutory Auditing Standards"
+    ],
+    "certifications": [
+      "Chartered Accountant (ICAI / ICAEW)",
+      "Certified Public Accountant (CPA)",
+      "ACCA Professional Qualification"
+    ],
+    "entrance_exams": [
+      "CA Foundation / Entrance exam conducted by statutory accountancy bodies (e.g. ICAI)"
+    ],
+    "job_opportunities": [
+      "Big 4 Accounting Firms",
+      "Audit Consultancies",
+      "Multinational Corporations",
+      "Tax Advisory Practices"
+    ],
+    "related_titles": [
+      "Statutory Auditor",
+      "Tax Consultant",
+      "Finance Controller"
+    ],
+    "progression": [
+      "Audit Associate",
+      "Senior Auditor",
+      "Audit Manager",
+      "Partner / Chief Financial Officer (CFO)"
+    ],
+    "industry_sectors": [
+      "Professional Services",
+      "Banking",
+      "Corporate Finance",
+      "Public Sector"
+    ],
+    "learning_difficulty": "Advanced",
+    "roadmap_stages": [
+      {
+        "title": "Accounting Principles & Corporate Law",
+        "duration": "Month 1-2",
+        "topics": [
+          "Double-entry ledger",
+          "Financial statement drafting",
+          "Company Law basics",
+          "Cost accounting"
+        ],
+        "project": "Complete Company Financial Statement Compilation"
+      },
+      {
+        "title": "Direct & Indirect Taxation",
+        "duration": "Month 3-4",
+        "topics": [
+          "Corporate Income Tax",
+          "GST / VAT compliance",
+          "Tax computation",
+          "Withholding taxes"
+        ],
+        "project": "Corporate Tax Computation & Filing Simulation"
+      },
+      {
+        "title": "Statutory Auditing & Ethics",
+        "duration": "Month 5-6",
+        "topics": [
+          "Audit sampling",
+          "Internal controls verification",
+          "IFRS reporting",
+          "Audit reports"
+        ],
+        "project": "Comprehensive Statutory Audit Case Study"
+      }
+    ]
+  },
+  {
+    "id": "financial-analyst",
+    "title": "Financial Analyst",
+    "category": "Commerce, Accounting and Finance",
+    "industry": "Finance & Investment",
+    "minimum_education": "Bachelor's Degree in Finance, Economics, Business, Mathematics, or Accounting",
+    "recommended_qualifications": "B.Com, BBA Finance, or Economics degree with CFA progression",
+    "description": "Evaluates financial data, builds valuation models, tracks market trends, and guides corporate investment decisions and portfolio strategies.",
+    "responsibilities": [
+      "Construct discounted cash flow (DCF) and three-statement financial models in Excel",
+      "Conduct valuation and credit risk analyses on prospective business acquisitions",
+      "Analyze macroeconomic indicators, industry trends, and quarterly earnings reports",
+      "Prepare investment memoranda and executive decks for portfolio managers"
+    ],
+    "technical_skills": [
+      "Financial Modeling",
+      "Valuation (DCF/Comps)",
+      "Advanced Excel",
+      "Financial Statement Analysis",
+      "PowerPoint",
+      "Bloomberg / FactSet"
+    ],
+    "soft_skills": [
+      "Quantitative Insight",
+      "Persuasive Presentation",
+      "Work Ethic",
+      "Strategic Thinking"
+    ],
+    "courses": [
+      "Financial Modeling & Valuation",
+      "Corporate Finance Fundamentals",
+      "Equity Research Analysis"
+    ],
+    "certifications": [
+      "CFA (Chartered Financial Analyst)",
+      "Financial Modeling & Valuation Analyst (FMVA)"
+    ],
+    "entrance_exams": [
+      "Standard university commerce/finance admission criteria apply"
+    ],
+    "job_opportunities": [
+      "Investment Banks",
+      "Asset Management Companies",
+      "Private Equity Firms",
+      "Corporate Treasury"
+    ],
+    "related_titles": [
+      "Investment Analyst",
+      "Equity Research Associate",
+      "Corporate Finance Analyst"
+    ],
+    "progression": [
+      "Junior Financial Analyst",
+      "Financial Analyst",
+      "Senior Portfolio Analyst",
+      "Portfolio Manager / VP Finance"
+    ],
+    "industry_sectors": [
+      "Investment Banking",
+      "Wealth Management",
+      "Corporate Treasury",
+      "Fintech"
+    ],
+    "learning_difficulty": "Moderate",
+    "roadmap_stages": [
+      {
+        "title": "Financial Accounting & Excel Modeling",
+        "duration": "Month 1-2",
+        "topics": [
+          "Income statement, Balance sheet, Cash flow link",
+          "Dynamic Excel modeling",
+          "Scenario analysis"
+        ],
+        "project": "3-Statement Dynamic Financial Model"
+      },
+      {
+        "title": "Valuation Techniques & Equity Research",
+        "duration": "Month 3-4",
+        "topics": [
+          "DCF valuation",
+          "Comparable company multiples",
+          "WACC calculation",
+          "Earnings analysis"
+        ],
+        "project": "Public Company Equity Valuation Report"
+      },
+      {
+        "title": "Capital Budgeting & Investment Thesis",
+        "duration": "Month 5-6",
+        "topics": [
+          "M&A analysis",
+          "Leveraged Buyout (LBO) basics",
+          "Investor presentation pitch"
+        ],
+        "project": "M&A Investment Pitch Memorandum"
+      }
+    ]
+  },
+  {
+    "id": "business-analyst",
+    "title": "Business Analyst",
+    "category": "Business and Management",
+    "industry": "Business Consulting",
+    "minimum_education": "Bachelor's Degree in Business Administration, IT, Finance, or Engineering",
+    "recommended_qualifications": "BBA, B.Com, MBA, or B.Tech with business systems training",
+    "description": "Identifies business operational requirements, documents process flows, bridges business stakeholders with technical development teams, and recommends digital solutions.",
+    "responsibilities": [
+      "Facilitate stakeholder workshops to elicit, clarify, and document business requirements",
+      "Author Business Requirements Documents (BRD) and user stories with clear acceptance criteria",
+      "Model business workflows and system processes using BPMN and UML diagrams",
+      "Support user acceptance testing (UAT) and validate that implemented software fulfills business goals"
+    ],
+    "technical_skills": [
+      "Business Requirement Gathering",
+      "UML & BPMN",
+      "Agile / Scrum",
+      "Jira & Confluence",
+      "SQL Basics",
+      "Data Flow Modeling"
+    ],
+    "soft_skills": [
+      "Stakeholder Management",
+      "Active Listening",
+      "Negotiation",
+      "Clear Communication"
+    ],
+    "courses": [
+      "Business Analysis Foundations",
+      "Agile Product Ownership & User Stories",
+      "Process Mapping with BPMN"
+    ],
+    "certifications": [
+      "ECBA / CCBA (IIBA Certifications)",
+      "PMI-PBA (Professional in Business Analysis)"
+    ],
+    "entrance_exams": [
+      "Standard degree admissions apply"
+    ],
+    "job_opportunities": [
+      "IT Consulting Companies",
+      "Banks & Insurance Providers",
+      "Healthcare Enterprises",
+      "SaaS Firms"
+    ],
+    "related_titles": [
+      "Functional Analyst",
+      "Systems Analyst",
+      "Product Owner"
+    ],
+    "progression": [
+      "Associate Business Analyst",
+      "Senior Business Analyst",
+      "Lead Product Manager",
+      "Director of Business Solutions"
+    ],
+    "industry_sectors": [
+      "Consulting",
+      "Enterprise IT",
+      "Banking",
+      "Healthcare"
+    ],
+    "learning_difficulty": "Moderate",
+    "roadmap_stages": [
+      {
+        "title": "Requirements Elicitation & Documentation",
+        "duration": "Month 1-2",
+        "topics": [
+          "Stakeholder interviews",
+          "BRD & FRD authoring",
+          "User persona creation",
+          "Acceptance criteria"
+        ],
+        "project": "University Portal Business Requirements Document"
+      },
+      {
+        "title": "Process Modeling & Agile Methodology",
+        "duration": "Month 3-4",
+        "topics": [
+          "BPMN workflow diagrams",
+          "UML use cases",
+          "Scrum ceremonies",
+          "Jira sprint planning"
+        ],
+        "project": "E-Commerce Checkout Process Optimization Map"
+      },
+      {
+        "title": "Data-Driven Analysis & UAT Testing",
+        "duration": "Month 5-6",
+        "topics": [
+          "SQL queries for validation",
+          "UAT test script writing",
+          "Change management"
+        ],
+        "project": "End-to-End Digital Transformation Case Study"
+      }
+    ]
+  },
+  {
+    "id": "hr-manager",
+    "title": "Human Resources (HR) Manager",
+    "category": "Business and Management",
+    "industry": "Human Capital",
+    "minimum_education": "Bachelor's or Master's Degree in Human Resource Management, Psychology, or Business Administration",
+    "recommended_qualifications": "BBA/MBA with HR specialization",
+    "description": "Leads talent recruitment, employee development, labor relations, performance management, and workplace culture initiatives in organizations.",
+    "responsibilities": [
+      "Formulate talent acquisition strategies and supervise full-cycle recruitment campaigns",
+      "Manage employee compensation, benefits packages, and performance evaluation cycles",
+      "Resolve workplace disputes and uphold statutory labor and employment laws",
+      "Design organizational onboarding and continuous professional development programs"
+    ],
+    "technical_skills": [
+      "HR Information Systems (HRIS)",
+      "Talent Acquisition",
+      "Labor Law Compliance",
+      "Performance Management Systems",
+      "HR Analytics"
+    ],
+    "soft_skills": [
+      "Conflict Resolution",
+      "Empathy",
+      "Discretion",
+      "Organizational Leadership"
+    ],
+    "courses": [
+      "Strategic Human Resource Management",
+      "Employment Law & Labor Relations",
+      "People Analytics"
+    ],
+    "certifications": [
+      "SHRM-CP (Society for Human Resource Management Certified Professional)",
+      "PHR (Professional in Human Resources)"
+    ],
+    "entrance_exams": [
+      "Management entrance exams (e.g., CAT, MAT, XAT, GMAT) where applicable"
+    ],
+    "job_opportunities": [
+      "Multinational Corporations",
+      "Tech Companies",
+      "Non-Profit Organizations",
+      "Educational Institutions"
+    ],
+    "related_titles": [
+      "People Operations Manager",
+      "Talent Acquisition Manager",
+      "HR Business Partner"
+    ],
+    "progression": [
+      "HR Associate",
+      "HR Generalist",
+      "HR Manager",
+      "Chief Human Resources Officer (CHRO)"
+    ],
+    "industry_sectors": [
+      "Corporate Enterprises",
+      "Tech Industry",
+      "Healthcare",
+      "Manufacturing"
+    ],
+    "learning_difficulty": "Moderate",
+    "roadmap_stages": [
+      {
+        "title": "Talent Acquisition & Sourcing",
+        "duration": "Month 1-2",
+        "topics": [
+          "Job description authoring",
+          "Candidate interviewing",
+          "Applicant tracking systems (ATS)",
+          "Offer negotiation"
+        ],
+        "project": "End-to-End Recruitment Strategy Plan"
+      },
+      {
+        "title": "Employee Engagement & Labor Compliance",
+        "duration": "Month 3-4",
+        "topics": [
+          "Labor law basics",
+          "Workplace policies",
+          "Disciplinary procedures",
+          "Performance appraisals"
+        ],
+        "project": "Comprehensive Employee Handbook & Policy Guide"
+      },
+      {
+        "title": "Strategic People Analytics & Culture",
+        "duration": "Month 5-6",
+        "topics": [
+          "Retention metrics",
+          "Diversity & inclusion",
+          "HR analytics dashboards",
+          "Executive alignment"
+        ],
+        "project": "Organizational Talent Retention Initiative"
+      }
+    ]
+  },
+  {
+    "id": "corporate-lawyer",
+    "title": "Corporate Lawyer",
+    "category": "Law and Legal Services",
+    "industry": "Legal Practice",
+    "minimum_education": "Bachelor of Laws (LL.B.) or integrated B.A. LL.B. / B.B.A. LL.B.",
+    "recommended_qualifications": "Recognized law degree with State Bar Council enrollment",
+    "description": "Advises corporations on legal rights, contract negotiations, corporate governance, mergers and acquisitions, and regulatory compliance.",
+    "responsibilities": [
+      "Draft, review, and negotiate commercial contracts, vendor agreements, and NDA contracts",
+      "Conduct legal due diligence on mergers, acquisitions, and joint venture investments",
+      "Ensure corporate practices comply with statutory regulations, securities laws, and antitrust rules",
+      "Represent organizational interests in arbitration and commercial dispute resolutions"
+    ],
+    "technical_skills": [
+      "Contract Drafting",
+      "Legal Due Diligence",
+      "Corporate Governance",
+      "Statutory Compliance",
+      "Legal Research (Westlaw/SCC)",
+      "Arbitration"
+    ],
+    "soft_skills": [
+      "Verbal Persuasion",
+      "Analytical Precision",
+      "Negotiation",
+      "Confidentiality"
+    ],
+    "courses": [
+      "Corporate and Commercial Law",
+      "Contract Drafting & Negotiation",
+      "Mergers & Acquisitions Law"
+    ],
+    "certifications": [
+      "Bar Council / Bar Association Admission",
+      "Certified Corporate Governance Professional"
+    ],
+    "entrance_exams": [
+      "National law admissions tests (e.g., CLAT in India, LSAT in US/Canada; varies by jurisdiction)"
+    ],
+    "job_opportunities": [
+      "Corporate Law Firms",
+      "In-House Legal Departments",
+      "Investment Funds",
+      "Government Regulatory Bodies"
+    ],
+    "related_titles": [
+      "Legal Counsel",
+      "In-House Corporate Counsel",
+      "Commercial Solicitor"
+    ],
+    "progression": [
+      "Associate Lawyer",
+      "Senior Legal Counsel",
+      "Partner in Law Firm",
+      "General Counsel"
+    ],
+    "industry_sectors": [
+      "Legal Services",
+      "Banking",
+      "Corporate Enterprises",
+      "Real Estate"
+    ],
+    "learning_difficulty": "Challenging",
+    "roadmap_stages": [
+      {
+        "title": "Legal Systems & Constitutional Law",
+        "duration": "Month 1-2",
+        "topics": [
+          "Jurisprudence",
+          "Contract law foundations",
+          "Case briefing",
+          "Legal research databases"
+        ],
+        "project": "Analysis of Landmark Commercial Law Judgments"
+      },
+      {
+        "title": "Commercial Drafting & Contract Negotiations",
+        "duration": "Month 3-4",
+        "topics": [
+          "Indemnity & liability clauses",
+          "Master service agreements",
+          "Breach of contract remedies"
+        ],
+        "project": "Commercial SaaS Agreement Drafting Portfolio"
+      },
+      {
+        "title": "Corporate Compliance, M&A & Due Diligence",
+        "duration": "Month 5-6",
+        "topics": [
+          "Company Law",
+          "Due diligence checklists",
+          "Share purchase agreements",
+          "Arbitration procedures"
+        ],
+        "project": "Simulated Corporate M&A Due Diligence Report"
+      }
+    ]
+  },
+  {
+    "id": "civil-services-officer",
+    "title": "Civil Services Officer / Public Administrator",
+    "category": "Government and Public Services",
+    "industry": "Public Administration",
+    "minimum_education": "Bachelor's Degree in any discipline from a recognized university",
+    "recommended_qualifications": "Graduation in Humanities, Political Science, Economics, Public Administration, or Engineering",
+    "description": "Implements government policies, manages public administration, maintains law and public welfare, and coordinates socioeconomic development programs.",
+    "responsibilities": [
+      "Administer public schemes, social welfare programs, and municipal development initiatives",
+      "Maintain district law, public order, and governmental regulatory compliance",
+      "Supervise departmental revenue collection, public budgets, and civil infrastructure projects",
+      "Coordinate disaster management and emergency relief operations across administrative divisions"
+    ],
+    "technical_skills": [
+      "Public Policy Analysis",
+      "Governmental Budgeting",
+      "Administrative Law",
+      "E-Governance Systems",
+      "Disaster Management"
+    ],
+    "soft_skills": [
+      "Public Leadership",
+      "Impartiality",
+      "Crisis Resilience",
+      "Diplomacy"
+    ],
+    "courses": [
+      "Public Administration and Governance",
+      "Comparative Politics",
+      "Development Economics"
+    ],
+    "certifications": [
+      "Official Civil Services Induction / Administrative Academy Credentials"
+    ],
+    "entrance_exams": [
+      "Competitive National/State Civil Services Examinations (e.g. UPSC CSE, State PSCs; exam formats vary by country)"
+    ],
+    "job_opportunities": [
+      "District Administration",
+      "Government Ministries",
+      "Public Policy Think Tanks",
+      "Diplomatic Services"
+    ],
+    "related_titles": [
+      "Public Administration Officer",
+      "Government Affairs Director",
+      "District Collector / Magistrate"
+    ],
+    "progression": [
+      "Sub-Divisional Magistrate",
+      "District Administrator",
+      "Joint Secretary to Government",
+      "Cabinet Secretary"
+    ],
+    "industry_sectors": [
+      "Public Administration",
+      "Government Ministries",
+      "Public Policy",
+      "Social Welfare"
+    ],
+    "learning_difficulty": "Advanced",
+    "roadmap_stages": [
+      {
+        "title": "Constitutional Law & General Studies",
+        "duration": "Month 1-2",
+        "topics": [
+          "Constitution & Governance",
+          "Modern History",
+          "Geography",
+          "Current Socio-economic Affairs"
+        ],
+        "project": "District Public Policy Implementation Critique"
+      },
+      {
+        "title": "Public Administration & Ethics",
+        "duration": "Month 3-4",
+        "topics": [
+          "Administrative theories",
+          "Ethics in governance",
+          "E-Governance",
+          "Budgetary mechanisms"
+        ],
+        "project": "Comprehensive Municipal Welfare Delivery Plan"
+      },
+      {
+        "title": "Mock Administrative Cases & Essay Synthesis",
+        "duration": "Month 5-6",
+        "topics": [
+          "Case study analysis",
+          "Disaster relief protocol",
+          "Public interview preparation"
+        ],
+        "project": "Crisis Administration Simulation Portfolio"
+      }
+    ]
+  },
+  {
+    "id": "university-professor",
+    "title": "Professor / Higher Education Lecturer",
+    "category": "Education and Teaching",
+    "industry": "Higher Education",
+    "minimum_education": "Master's Degree and Ph.D. in the relevant discipline",
+    "recommended_qualifications": "Doctorate (Ph.D.) with published academic research and qualifying eligibility (e.g. NET/SET where required)",
+    "description": "Instructs undergraduate and graduate university students, designs academic curricula, conducts original scholarly research, and mentors students.",
+    "responsibilities": [
+      "Deliver university lectures, laboratory sessions, and seminar discussions",
+      "Design course curricula, reading syllabi, homework assignments, and examinations",
+      "Conduct scholarly peer-reviewed research and secure external academic grant funding",
+      "Supervise undergraduate capstone projects, master's theses, and doctoral dissertations"
+    ],
+    "technical_skills": [
+      "Pedagogy",
+      "Curriculum Design",
+      "Scholarly Research Methodology",
+      "Statistical Tools (SPSS/R)",
+      "Academic Publishing"
+    ],
+    "soft_skills": [
+      "Mentorship",
+      "Public Speaking",
+      "Intellectual Rigor",
+      "Patience"
+    ],
+    "courses": [
+      "Higher Education Pedagogy",
+      "Scholarly Research Methods & Ethics",
+      "Academic Grant Writing"
+    ],
+    "certifications": [
+      "UGC-NET / National Eligibility Test (in countries with mandatory criteria)",
+      "Fellowship in Higher Education Academy"
+    ],
+    "entrance_exams": [
+      "National Eligibility Tests / University Ph.D. entrance examinations"
+    ],
+    "job_opportunities": [
+      "Universities",
+      "Colleges & Polytechnics",
+      "Research Institutes",
+      "Higher Education Consultancies"
+    ],
+    "related_titles": [
+      "Lecturer",
+      "Assistant Professor",
+      "Academic Researcher"
+    ],
+    "progression": [
+      "Assistant Professor",
+      "Associate Professor",
+      "Full Professor",
+      "Dean / University Provost"
+    ],
+    "industry_sectors": [
+      "Higher Education",
+      "Academic Research",
+      "Scientific Publishing"
+    ],
+    "learning_difficulty": "Advanced",
+    "roadmap_stages": [
+      {
+        "title": "Subject Mastery & Teaching Methodologies",
+        "duration": "Month 1-2",
+        "topics": [
+          "Core subject domain",
+          "Bloom's taxonomy",
+          "Classroom engagement",
+          "Lesson planning"
+        ],
+        "project": "14-Week University Course Syllabus & Curriculum"
+      },
+      {
+        "title": "Scholarly Research & Publication",
+        "duration": "Month 3-4",
+        "topics": [
+          "Literature review",
+          "Research methodology",
+          "Data gathering",
+          "Peer-review publishing"
+        ],
+        "project": "Scholarly Research Paper Draft"
+      },
+      {
+        "title": "Grant Proposal & Doctoral Defense",
+        "duration": "Month 5-6",
+        "topics": [
+          "Grant budget authoring",
+          "Student mentoring frameworks",
+          "Academic presentations"
+        ],
+        "project": "Academic Research Grant Proposal"
+      }
+    ]
+  },
+  {
+    "id": "biotechnology-scientist",
+    "title": "Biotechnology Research Scientist",
+    "category": "Science and Research",
+    "industry": "Biotechnology & Life Sciences",
+    "minimum_education": "Master's Degree or Ph.D. in Biotechnology, Biochemistry, Microbiology, or Molecular Biology",
+    "recommended_qualifications": "M.Sc / M.Tech / Ph.D. with laboratory research experience",
+    "description": "Conducts laboratory experiments on cellular, genetic, and molecular organisms to develop biomedical therapies, agricultural solutions, and industrial enzymes.",
+    "responsibilities": [
+      "Perform laboratory assays including PCR, gel electrophoresis, ELISA, and cell culture",
+      "Design and test genetic constructs and recombinant DNA expression systems",
+      "Analyze biological sequence data using bioinformatics algorithms and databases",
+      "Document experimental findings in laboratory notebooks adhering to GLP (Good Laboratory Practice)"
+    ],
+    "technical_skills": [
+      "Cell Culture",
+      "PCR & Gel Electrophoresis",
+      "Bioinformatics (NCBI, BLAST)",
+      "Spectrophotometry",
+      "GLP Standards",
+      "Statistical Data Analysis"
+    ],
+    "soft_skills": [
+      "Scientific Precision",
+      "Methodical Planning",
+      "Critical Observation",
+      "Patience"
+    ],
+    "courses": [
+      "Advanced Molecular Biology",
+      "Bioprocess Engineering",
+      "Bioinformatics and Genomic Data"
+    ],
+    "certifications": [
+      "Good Laboratory Practice (GLP) Certification",
+      "Biohazard Safety Training"
+    ],
+    "entrance_exams": [
+      "Graduate science entrance examinations (e.g. GATE, CSIR-NET in India; GRE/subject tests abroad)"
+    ],
+    "job_opportunities": [
+      "Biotech Companies",
+      "Pharmaceutical R&D Centers",
+      "Agricultural Biotech Labs",
+      "National Research Institutes"
+    ],
+    "related_titles": [
+      "Molecular Biologist",
+      "R&D Scientist",
+      "Bioassay Specialist"
+    ],
+    "progression": [
+      "Research Associate",
+      "Scientist I",
+      "Senior Scientist",
+      "Director of Research & Development"
+    ],
+    "industry_sectors": [
+      "Biotechnology",
+      "Pharmaceuticals",
+      "AgriTech",
+      "Life Sciences"
+    ],
+    "learning_difficulty": "Advanced",
+    "roadmap_stages": [
+      {
+        "title": "Molecular Biology & Lab Techniques",
+        "duration": "Month 1-2",
+        "topics": [
+          "Sterilization & Pipetting",
+          "Buffer preparation",
+          "DNA extraction",
+          "PCR amplification"
+        ],
+        "project": "DNA Extraction and PCR Assay Protocol Design"
+      },
+      {
+        "title": "Bioinformatics & Sequence Analysis",
+        "duration": "Month 3-4",
+        "topics": [
+          "NCBI GenBank",
+          "Sequence alignment",
+          "Protein modeling",
+          "CRISPR gene editing basics"
+        ],
+        "project": "Bioinformatic Gene Sequence Homology Analysis"
+      },
+      {
+        "title": "Bioprocess Development & GLP Compliance",
+        "duration": "Month 5-6",
+        "topics": [
+          "Fermentation principles",
+          "Protein purification (Chromatography)",
+          "GLP documentation"
+        ],
+        "project": "Complete Recombinant Protein Expression Workflow"
+      }
+    ]
+  },
+  {
+    "id": "ui-ux-designer",
+    "title": "UI/UX Designer",
+    "category": "Creative Arts and Design",
+    "industry": "Digital Design",
+    "minimum_education": "Bachelor's Degree in Design, Human-Computer Interaction, Fine Arts, or Computer Science",
+    "recommended_qualifications": "B.Des, B.Sc Graphic Design, or UX Bootcamp certification with design portfolio",
+    "description": "Designs intuitive user experiences, interactive prototypes, and visually captivating interfaces for web and mobile software products.",
+    "responsibilities": [
+      "Conduct qualitative user research, stakeholder interviews, and usability tests",
+      "Create low-fidelity wireframes, user personas, and customer journey maps",
+      "Build high-fidelity UI mockups and design systems using Figma or Adobe XD",
+      "Collaborate with frontend developers to ensure design fidelity during software implementation"
+    ],
+    "technical_skills": [
+      "Figma",
+      "Adobe XD",
+      "Wireframing",
+      "Prototyping",
+      "User Research",
+      "Design Systems",
+      "Usability Testing",
+      "HTML/CSS Basics"
+    ],
+    "soft_skills": [
+      "Empathy",
+      "Visual Aesthetics",
+      "Receptiveness to Feedback",
+      "Storytelling"
+    ],
+    "courses": [
+      "Google UX Design Professional Certificate",
+      "UI Design Systems Masterclass",
+      "Interaction Design Foundations"
+    ],
+    "certifications": [
+      "Google UX Design Certificate",
+      "Nielsen Norman Group UX Master Certified"
+    ],
+    "entrance_exams": [
+      "Design school entrance exams (e.g., UCEED, NID DAT, NIFT) where applicable"
+    ],
+    "job_opportunities": [
+      "Tech Startups",
+      "Digital Design Agencies",
+      "SaaS Enterprises",
+      "E-Commerce Platforms"
+    ],
+    "related_titles": [
+      "Product Designer",
+      "User Experience Researcher",
+      "Interaction Designer"
+    ],
+    "progression": [
+      "Junior UI/UX Designer",
+      "Product Designer",
+      "Lead UX Architect",
+      "Head of Design"
+    ],
+    "industry_sectors": [
+      "Digital Software",
+      "E-Commerce",
+      "Fintech",
+      "Mobile Applications"
+    ],
+    "learning_difficulty": "Moderate",
+    "roadmap_stages": [
+      {
+        "title": "Design Principles & User Research",
+        "duration": "Month 1-2",
+        "topics": [
+          "Typography",
+          "Color theory",
+          "Visual hierarchy",
+          "User interviews",
+          "Empathy maps"
+        ],
+        "project": "Student Mobile App User Research & Wireframes"
+      },
+      {
+        "title": "Figma Mastery & UI Components",
+        "duration": "Month 3-4",
+        "topics": [
+          "Auto-layout",
+          "Variants",
+          "Design tokens",
+          "Interactive micro-prototyping"
+        ],
+        "project": "Complete Responsive E-Commerce Design System"
+      },
+      {
+        "title": "Usability Testing & Case Study Presentation",
+        "duration": "Month 5-6",
+        "topics": [
+          "A/B usability testing",
+          "Accessibility (WCAG)",
+          "Portfolio case study authoring"
+        ],
+        "project": "Comprehensive UX Case Study for Portfolio"
+      }
+    ]
+  },
+  {
+    "id": "digital-content-strategist",
+    "title": "Digital Content Strategist",
+    "category": "Media and Communication",
+    "industry": "Digital Media & Marketing",
+    "minimum_education": "Bachelor's Degree in Journalism, Mass Communication, English, or Marketing",
+    "recommended_qualifications": "B.A. Journalism/Mass Comm or Digital Marketing specialization",
+    "description": "Plans, writes, edits, and distributes multi-channel digital editorial campaigns to build audience brand awareness and engagement.",
+    "responsibilities": [
+      "Author engaging editorial content, educational articles, and social media campaigns",
+      "Conduct keyword research and optimize digital assets for search engine optimization (SEO)",
+      "Analyze audience retention and click-through metrics using Google Analytics",
+      "Manage editorial calendars and content distribution across digital channels"
+    ],
+    "technical_skills": [
+      "SEO Writing",
+      "Google Analytics",
+      "Content Management Systems (WordPress)",
+      "Social Media Analytics",
+      "Copywriting"
+    ],
+    "soft_skills": [
+      "Persuasive Writing",
+      "Creativity",
+      "Adaptability",
+      "Audience Empathy"
+    ],
+    "courses": [
+      "HubSpot Content Marketing Certification",
+      "SEO Foundations by Moz",
+      "Digital Brand Storytelling"
+    ],
+    "certifications": [
+      "HubSpot Content Marketing",
+      "Google Analytics Individual Qualification (GAIQ)"
+    ],
+    "entrance_exams": [
+      "Standard university media and journalism entrance tests"
+    ],
+    "job_opportunities": [
+      "Digital Media Publications",
+      "Marketing Agencies",
+      "Tech Companies",
+      "Corporate PR Departments"
+    ],
+    "related_titles": [
+      "Content Marketing Manager",
+      "Digital Copywriter",
+      "Social Media Strategist"
+    ],
+    "progression": [
+      "Content Writer",
+      "Content Strategist",
+      "Editorial Lead",
+      "VP of Brand & Content"
+    ],
+    "industry_sectors": [
+      "Digital Publishing",
+      "Marketing",
+      "E-Commerce",
+      "Corporate Media"
+    ],
+    "learning_difficulty": "Beginner to Moderate",
+    "roadmap_stages": [
+      {
+        "title": "Copywriting & Editorial Foundations",
+        "duration": "Month 1-2",
+        "topics": [
+          "Brand voice",
+          "Article structure",
+          "Compelling headlines",
+          "Editorial guidelines"
+        ],
+        "project": "3-Part Educational Article Series"
+      },
+      {
+        "title": "SEO & Keyword Optimization",
+        "duration": "Month 3-4",
+        "topics": [
+          "On-page SEO",
+          "Search intent",
+          "Keyword tools",
+          "Internal linking"
+        ],
+        "project": "SEO-Optimized Pillar Content Guide"
+      },
+      {
+        "title": "Analytics, Distribution & Strategy",
+        "duration": "Month 5-6",
+        "topics": [
+          "Google Analytics 4",
+          "Email newsletters",
+          "Editorial calendar management"
+        ],
+        "project": "Quarterly Content Strategy Plan"
+      }
+    ]
+  },
+  {
+    "id": "architect",
+    "title": "Architect",
+    "category": "Architecture and Construction",
+    "industry": "Architecture & Built Environment",
+    "minimum_education": "Bachelor of Architecture (B.Arch)",
+    "recommended_qualifications": "B.Arch degree with national Council of Architecture registration",
+    "description": "Conceives, plans, and designs functional, aesthetically engaging, and structurally sound residential, commercial, and public buildings.",
+    "responsibilities": [
+      "Develop schematic designs and architectural concepts addressing client needs",
+      "Produce detailed construction drawings, sections, and elevations using Revit and AutoCAD",
+      "Ensure architectural plans comply with municipal zoning regulations and accessibility laws",
+      "Conduct on-site construction reviews to verify building adherence to specifications"
+    ],
+    "technical_skills": [
+      "Autodesk Revit (BIM)",
+      "AutoCAD",
+      "SketchUp / Rhino",
+      "V-Ray / Lumion Rendering",
+      "Building Codes",
+      "Sustainable Architecture"
+    ],
+    "soft_skills": [
+      "Spatial Creativity",
+      "Client Communication",
+      "Aesthetic Vision",
+      "Collaborative Coordination"
+    ],
+    "courses": [
+      "Building Information Modeling (BIM)",
+      "Sustainable Building Design",
+      "Architectural Detailing"
+    ],
+    "certifications": [
+      "Licensed Architect Registration",
+      "LEED Accredited Professional (LEED AP)"
+    ],
+    "entrance_exams": [
+      "National architecture entrance exams (e.g. NATA or JEE Main Paper 2 in India; jurisdiction-specific equivalents abroad)"
+    ],
+    "job_opportunities": [
+      "Architectural Studios",
+      "Real Estate Developers",
+      "Urban Design Consultancies",
+      "Government Planning Bodies"
+    ],
+    "related_titles": [
+      "Project Architect",
+      "BIM Specialist",
+      "Urban Architectural Designer"
+    ],
+    "progression": [
+      "Junior Architect",
+      "Project Architect",
+      "Senior Design Lead",
+      "Principal Partner"
+    ],
+    "industry_sectors": [
+      "Architecture",
+      "Real Estate",
+      "Urban Planning",
+      "Sustainable Construction"
+    ],
+    "learning_difficulty": "Challenging",
+    "roadmap_stages": [
+      {
+        "title": "Architectural Drafting & 3D Modeling",
+        "duration": "Month 1-2",
+        "topics": [
+          "Scale drawings",
+          "AutoCAD drafting",
+          "SketchUp modeling",
+          "Basic rendering"
+        ],
+        "project": "Single-Family Contemporary Residence Concept"
+      },
+      {
+        "title": "BIM with Revit & Building Codes",
+        "duration": "Month 3-4",
+        "topics": [
+          "Revit modeling",
+          "Structural coordination",
+          "Wall sections",
+          "Zoning by-laws"
+        ],
+        "project": "Commercial Office Building BIM Model"
+      },
+      {
+        "title": "Sustainable Design & Construction Detailing",
+        "duration": "Month 5-6",
+        "topics": [
+          "Passive solar design",
+          "Material specifications",
+          "Contract documents"
+        ],
+        "project": "Comprehensive Green Architectural Proposal"
+      }
+    ]
+  },
+  {
+    "id": "agronomist",
+    "title": "Agricultural Scientist / Agronomist",
+    "category": "Agriculture and Agribusiness",
+    "industry": "Agricultural Science",
+    "minimum_education": "Bachelor's Degree in Agriculture (B.Sc. Agriculture / B.Tech Agri Engineering)",
+    "recommended_qualifications": "B.Sc Agriculture or M.Sc in Agronomy/Soil Science",
+    "description": "Studies soil management, crop genetics, and environmental factors to boost agricultural productivity, disease resistance, and sustainability.",
+    "responsibilities": [
+      "Analyze soil chemistry, nutrient profiles, and irrigation efficiency across agricultural fields",
+      "Develop integrated pest management (IPM) and crop rotation strategies",
+      "Conduct field trials on hybrid seed varieties and bio-fertilizer formulations",
+      "Advise farmers and agricultural enterprises on sustainable cultivation methods"
+    ],
+    "technical_skills": [
+      "Soil Analysis",
+      "Crop Husbandry",
+      "Pest Management (IPM)",
+      "GIS in Agriculture",
+      "Irrigation Systems",
+      "Field Experimentation"
+    ],
+    "soft_skills": [
+      "Practical Observation",
+      "Farmer Empathy",
+      "Environmental Care",
+      "Clear Instruction"
+    ],
+    "courses": [
+      "Principles of Agronomy",
+      "Soil Fertility and Plant Nutrition",
+      "Precision Agricultural Technologies"
+    ],
+    "certifications": [
+      "Certified Crop Adviser (CCA)",
+      "Agronomic Practice Certification"
+    ],
+    "entrance_exams": [
+      "Agricultural university entrance exams (e.g. ICAR AIEEA in India; state agricultural CETs)"
+    ],
+    "job_opportunities": [
+      "Seed & Fertilizer Companies",
+      "Agricultural Research Institutes",
+      "Agri-Tech Startups",
+      "Government Agriculture Departments"
+    ],
+    "related_titles": [
+      "Crop Consultant",
+      "Soil Scientist",
+      "Precision Agriculture Specialist"
+    ],
+    "progression": [
+      "Field Agronomist",
+      "Senior Agronomist",
+      "Research Lead",
+      "Chief Agricultural Officer"
+    ],
+    "industry_sectors": [
+      "Agriculture",
+      "Agri-Food Processing",
+      "Biotech Agri",
+      "Rural Development"
+    ],
+    "learning_difficulty": "Moderate",
+    "roadmap_stages": [
+      {
+        "title": "Soil Science & Plant Physiology",
+        "duration": "Month 1-2",
+        "topics": [
+          "Soil pH & nutrients",
+          "Crop growth stages",
+          "Water requirements",
+          "Fertilizer types"
+        ],
+        "project": "Soil Nutrient Evaluation & Remediation Plan"
+      },
+      {
+        "title": "Crop Protection & Modern Irrigation",
+        "duration": "Month 3-4",
+        "topics": [
+          "Weed control",
+          "Fungal/Insect pests",
+          "Drip irrigation design",
+          "Field diagnostics"
+        ],
+        "project": "Integrated Pest Management Schedule for Cash Crops"
+      },
+      {
+        "title": "Precision Agriculture & Data Tools",
+        "duration": "Month 5-6",
+        "topics": [
+          "Drone imagery in farming",
+          "Soil moisture sensors",
+          "Agribusiness economics"
+        ],
+        "project": "Sustainable Farm Optimization Strategy"
+      }
+    ]
+  },
+  {
+    "id": "sustainability-consultant",
+    "title": "Sustainability Consultant",
+    "category": "Environment and Sustainability",
+    "industry": "Environmental Management",
+    "minimum_education": "Bachelor's Degree in Environmental Science, Sustainable Engineering, or Ecology",
+    "recommended_qualifications": "B.Sc/B.Tech in Environmental Science or ESG specialization",
+    "description": "Advises organizations on minimizing carbon footprints, complying with ESG regulations, and transitioning to renewable and circular practices.",
+    "responsibilities": [
+      "Calculate corporate greenhouse gas (GHG) inventories and Scope 1, 2, and 3 emissions",
+      "Conduct Environmental, Social, and Governance (ESG) compliance audits",
+      "Develop corporate decarbonization roadmaps and zero-waste initiatives",
+      "Author official sustainability reports aligned with GRI and CDP reporting frameworks"
+    ],
+    "technical_skills": [
+      "Carbon Accounting",
+      "ESG Reporting (GRI/SASB)",
+      "Life Cycle Assessment (LCA)",
+      "Renewable Energy Economics",
+      "Environmental Auditing"
+    ],
+    "soft_skills": [
+      "Systems Thinking",
+      "Persuasion",
+      "Ethical Vision",
+      "Cross-Disciplinary Synthesis"
+    ],
+    "courses": [
+      "Corporate Sustainability & ESG Reporting",
+      "Life Cycle Assessment Methodologies",
+      "Carbon Accounting Principles"
+    ],
+    "certifications": [
+      "LEED Green Associate",
+      "GRI Certified Sustainability Professional",
+      "GARP Sustainability and Climate Risk (SCR)"
+    ],
+    "entrance_exams": [
+      "University science and engineering admission guidelines apply"
+    ],
+    "job_opportunities": [
+      "Sustainability Consultancies",
+      "Corporations (ESG Departments)",
+      "Renewable Energy Providers",
+      "Government Environmental Agencies"
+    ],
+    "related_titles": [
+      "ESG Analyst",
+      "Environmental Consultant",
+      "Corporate Sustainability Manager"
+    ],
+    "progression": [
+      "Junior Sustainability Analyst",
+      "Sustainability Consultant",
+      "Senior ESG Advisor",
+      "Chief Sustainability Officer (CSO)"
+    ],
+    "industry_sectors": [
+      "Renewable Energy",
+      "Corporate ESG",
+      "Manufacturing",
+      "Urban Planning"
+    ],
+    "learning_difficulty": "Moderate",
+    "roadmap_stages": [
+      {
+        "title": "Climate Science & Sustainability Frameworks",
+        "duration": "Month 1-2",
+        "topics": [
+          "Carbon cycle",
+          "Greenhouse gas protocol",
+          "UN SDGs",
+          "Circular economy basics"
+        ],
+        "project": "Campus Carbon Footprint Assessment"
+      },
+      {
+        "title": "ESG Metrics & Environmental Auditing",
+        "duration": "Month 3-4",
+        "topics": [
+          "Scope 1, 2, 3 calculation",
+          "GRI standards",
+          "Energy efficiency audits",
+          "Waste reduction"
+        ],
+        "project": "Corporate ESG Baseline & Audit Report"
+      },
+      {
+        "title": "Decarbonization Strategies & Reporting",
+        "duration": "Month 5-6",
+        "topics": [
+          "Renewable transitions",
+          "Life Cycle Assessment (LCA)",
+          "Stakeholder reporting"
+        ],
+        "project": "Corporate Net-Zero Transition Roadmap"
+      }
+    ]
+  },
+  {
+    "id": "aerospace-engineer",
+    "title": "Aerospace Engineer",
+    "category": "Aviation and Aerospace",
+    "industry": "Aerospace & Defense",
+    "minimum_education": "Bachelor's Degree in Aerospace or Aeronautical Engineering (B.E. / B.Tech)",
+    "recommended_qualifications": "B.Tech Aerospace with aerodynamics and CAD/CFD training",
+    "description": "Designs, tests, and oversees the production of aircraft, spacecraft, satellites, propulsion systems, and unmanned aerial vehicles (UAVs).",
+    "responsibilities": [
+      "Perform computational fluid dynamics (CFD) simulations on wing surfaces and fuselages",
+      "Design lightweight structural frames using advanced aerospace alloys and composite materials",
+      "Calculate thrust-to-weight ratios and propulsion dynamics for jet or rocket engines",
+      "Participate in wind tunnel testing and analyze flight telemetry and stability metrics"
+    ],
+    "technical_skills": [
+      "Aerodynamics",
+      "CFD (Ansys Fluent)",
+      "Propulsion Systems",
+      "MATLAB / Simulink",
+      "Catia / SolidWorks",
+      "Flight Mechanics"
+    ],
+    "soft_skills": [
+      "Mathematical Precision",
+      "Safety-First Mindset",
+      "Analytical Tenacity",
+      "Team Collaboration"
+    ],
+    "courses": [
+      "Applied Aerodynamics",
+      "Aircraft Structural Mechanics",
+      "Computational Fluid Dynamics"
+    ],
+    "certifications": [
+      "Certified Professional Aerospace Engineer",
+      "Systems Engineering Certification (INCOSE)"
+    ],
+    "entrance_exams": [
+      "Engineering entrance examinations (e.g., JEE Main & Advanced)"
+    ],
+    "job_opportunities": [
+      "Aircraft Manufacturers (Boeing/Airbus)",
+      "Space Agencies (NASA/ISRO/ESA)",
+      "Defense Contractors",
+      "Commercial Drone Makers"
+    ],
+    "related_titles": [
+      "Aeronautical Engineer",
+      "Flight Test Engineer",
+      "Avionics Systems Specialist"
+    ],
+    "progression": [
+      "Junior Flight Dynamics Engineer",
+      "Aerospace Systems Engineer",
+      "Principal Lead Designer",
+      "Chief Aerospace Architect"
+    ],
+    "industry_sectors": [
+      "Commercial Aviation",
+      "Space Exploration",
+      "Defense Technologies",
+      "Unmanned Systems"
+    ],
+    "learning_difficulty": "Advanced",
+    "roadmap_stages": [
+      {
+        "title": "Flight Physics & Aerodynamic Principles",
+        "duration": "Month 1-2",
+        "topics": [
+          "Lift and drag equations",
+          "Airfoil geometry",
+          "Mach numbers",
+          "MATLAB flight modeling"
+        ],
+        "project": "Subsonic Airfoil Aerodynamic Lift/Drag Simulation"
+      },
+      {
+        "title": "Propulsion & Structural Stress Analysis",
+        "duration": "Month 3-4",
+        "topics": [
+          "Jet engine thermodynamic cycles",
+          "Composite materials",
+          "Ansys structural analysis"
+        ],
+        "project": "Aircraft Wing Spar Stress Analysis"
+      },
+      {
+        "title": "CFD Wind Tunnel Simulation & Stability",
+        "duration": "Month 5-6",
+        "topics": [
+          "Ansys Fluent CFD",
+          "Flight stability derivatives",
+          "Telemetry data processing"
+        ],
+        "project": "Complete UAV Aerodynamic Design & CFD Verification"
+      }
+    ]
+  },
+  {
+    "id": "hotel-general-manager",
+    "title": "Hotel General Manager",
+    "category": "Hospitality and Tourism",
+    "industry": "Hospitality & Travel",
+    "minimum_education": "Bachelor's Degree in Hotel Management (BHM) or Hospitality Administration",
+    "recommended_qualifications": "BHM / Hospitality Degree with hotel operations experience",
+    "description": "Oversees hotel operations including guest relations, front office, food and beverage, housekeeping, revenue yield management, and event hosting.",
+    "responsibilities": [
+      "Supervise daily operational departments across rooms, culinary, front office, and maintenance",
+      "Implement dynamic room pricing and revenue management strategies to maximize RevPAR",
+      "Ensure impeccable guest satisfaction, resolving customer escalations promptly",
+      "Manage hotel budgets, payroll costs, vendor procurement, and health safety inspections"
+    ],
+    "technical_skills": [
+      "Property Management Systems (Opera PMS)",
+      "RevPAR Optimization",
+      "Hospitality Cost Control",
+      "Guest Experience Management",
+      "Event Planning"
+    ],
+    "soft_skills": [
+      "Hospitality Mindset",
+      "Diplomacy",
+      "Crisis De-escalation",
+      "Staff Leadership"
+    ],
+    "courses": [
+      "Hospitality Operations & Management",
+      "Revenue Yield Optimization",
+      "Food & Beverage Cost Control"
+    ],
+    "certifications": [
+      "Certified Hotel Administrator (CHA)",
+      "Hospitality Revenue Management (CHRM)"
+    ],
+    "entrance_exams": [
+      "Hotel management entrance exams (e.g. NCHMCT JEE in India; institutional tests)"
+    ],
+    "job_opportunities": [
+      "Luxury Hotel Chains",
+      "Boutique Resorts",
+      "Cruise Lines",
+      "Corporate Conference Centers"
+    ],
+    "related_titles": [
+      "Hotel Operations Manager",
+      "Resort Manager",
+      "Director of Rooms"
+    ],
+    "progression": [
+      "Assistant Front Office Manager",
+      "Operations Manager",
+      "Hotel General Manager",
+      "Regional Hospitality Vice President"
+    ],
+    "industry_sectors": [
+      "Hospitality",
+      "Tourism",
+      "Luxury Travel",
+      "Event Management"
+    ],
+    "learning_difficulty": "Moderate",
+    "roadmap_stages": [
+      {
+        "title": "Front Office Operations & PMS Software",
+        "duration": "Month 1-2",
+        "topics": [
+          "Reservation management",
+          "Check-in workflows",
+          "Opera PMS basics",
+          "Guest communication"
+        ],
+        "project": "Front Office Standard Operating Procedure Manual"
+      },
+      {
+        "title": "F&B Management & Cost Accounting",
+        "duration": "Month 3-4",
+        "topics": [
+          "Menu engineering",
+          "Food safety audits",
+          "Housekeeping standards",
+          "Labor cost controls"
+        ],
+        "project": "Resort Food & Beverage Profitability Plan"
+      },
+      {
+        "title": "Revenue Management & Strategic Leadership",
+        "duration": "Month 5-6",
+        "topics": [
+          "RevPAR calculation",
+          "Occupancy forecasting",
+          "Crisis management",
+          "Staff training"
+        ],
+        "project": "Comprehensive Hotel Turnaround & Operations Strategy"
+      }
+    ]
+  },
+  {
+    "id": "sports-physiologist",
+    "title": "Sports Physiologist / Athletic Trainer",
+    "category": "Sports and Fitness",
+    "industry": "Sports Science & Athletics",
+    "minimum_education": "Bachelor's Degree in Exercise Science, Kinesiology, Sports Science, or Physical Education",
+    "recommended_qualifications": "B.Sc Sports Science or Kinesiology with strength and conditioning accreditation",
+    "description": "Analyzes athlete physiological mechanics to optimize performance, prevent physical injuries, and create scientifically grounded conditioning programs.",
+    "responsibilities": [
+      "Conduct biomechanical and physiological assessments (VO2 max, lactate threshold, flexibility)",
+      "Design tailored athletic conditioning, speed development, and injury rehabilitation regimens",
+      "Monitor athlete recovery metrics, heart rate variability, and nutritional compliance",
+      "Collaborate with head sports coaches and medical personnel during competitive seasons"
+    ],
+    "technical_skills": [
+      "Biomechanical Movement Analysis",
+      "VO2 Max Testing",
+      "Injury Rehabilitation Protocols",
+      "Strength & Conditioning Design",
+      "GPS Sports Tracking"
+    ],
+    "soft_skills": [
+      "Motivational Coaching",
+      "Communication",
+      "Patience",
+      "High Energy"
+    ],
+    "courses": [
+      "Exercise Physiology Fundamentals",
+      "Biomechanics of Human Movement",
+      "Sports Nutrition & Recovery"
+    ],
+    "certifications": [
+      "Certified Strength and Conditioning Specialist (CSCS)",
+      "ACSM Certified Exercise Physiologist (EP)"
+    ],
+    "entrance_exams": [
+      "Standard university science and physical education admission criteria"
+    ],
+    "job_opportunities": [
+      "Professional Sports Teams",
+      "Athletic Academies",
+      "Sports Medicine Clinics",
+      "Olympic Training Centers"
+    ],
+    "related_titles": [
+      "Strength & Conditioning Coach",
+      "Exercise Physiologist",
+      "Athletic Performance Specialist"
+    ],
+    "progression": [
+      "Assistant Trainer",
+      "Head Performance Coach",
+      "High Performance Director",
+      "Sports Science Director"
+    ],
+    "industry_sectors": [
+      "Professional Athletics",
+      "Fitness Industry",
+      "Rehabilitation Medicine",
+      "Olympic Programs"
+    ],
+    "learning_difficulty": "Moderate",
+    "roadmap_stages": [
+      {
+        "title": "Human Anatomy & Kinesiology",
+        "duration": "Month 1-2",
+        "topics": [
+          "Musculoskeletal system",
+          "Energy pathways",
+          "Movement planes",
+          "Basic screening (FMS)"
+        ],
+        "project": "Athletic Biomechanical Movement Screening Report"
+      },
+      {
+        "title": "Physiological Testing & Conditioning Design",
+        "duration": "Month 3-4",
+        "topics": [
+          "VO2 max testing",
+          "Periodization training",
+          "Plyometrics",
+          "Cardiovascular regimens"
+        ],
+        "project": "12-Week Pre-Season Athletic Conditioning Plan"
+      },
+      {
+        "title": "Injury Prevention, Recovery & Monitoring",
+        "duration": "Month 5-6",
+        "topics": [
+          "Load management",
+          "Post-injury return-to-play",
+          "Nutrition",
+          "Telemetry analysis"
+        ],
+        "project": "Elite Athlete High-Performance Monitoring Protocol"
+      }
+    ]
+  },
+  {
+    "id": "supply-chain-manager",
+    "title": "Supply Chain Manager",
+    "category": "Logistics and Supply Chain",
+    "industry": "Logistics & Operations",
+    "minimum_education": "Bachelor's Degree in Supply Chain, Logistics, Business Administration, or Industrial Engineering",
+    "recommended_qualifications": "BBA/B.Tech/MBA with operations and supply chain specialization",
+    "description": "Orchestrates end-to-end supply chain flows from raw material procurement and warehouse logistics to distribution and customer delivery.",
+    "responsibilities": [
+      "Forecast inventory demand and oversee material requirements planning (MRP)",
+      "Negotiate supplier contracts, freight terms, and delivery schedules to minimize costs",
+      "Optimize warehouse storage, inventory turns, and order fulfillment cycles",
+      "Identify global logistics bottlenecks and design resilient contingency delivery pathways"
+    ],
+    "technical_skills": [
+      "Supply Chain Optimization",
+      "ERP Systems (SAP/Oracle SCM)",
+      "Inventory Forecasting",
+      "Warehouse Management Systems (WMS)",
+      "Logistics Routing"
+    ],
+    "soft_skills": [
+      "Crisis Agility",
+      "Vendor Negotiation",
+      "Analytical Thinking",
+      "Cross-Functional Leadership"
+    ],
+    "courses": [
+      "Supply Chain Management Principles",
+      "Inventory and Warehouse Logistics",
+      "Procurement & Strategic Sourcing"
+    ],
+    "certifications": [
+      "Certified Supply Chain Professional (CSCP - APICS)",
+      "Certified in Logistics, Transportation and Distribution (CLTD)"
+    ],
+    "entrance_exams": [
+      "Management entrance exams or standard university admission rules apply"
+    ],
+    "job_opportunities": [
+      "E-Commerce Giants (Amazon)",
+      "Global Shipping & Freight Carriers",
+      "Manufacturing Enterprises",
+      "FMCG Companies"
+    ],
+    "related_titles": [
+      "Logistics Operations Manager",
+      "Procurement Director",
+      "Supply Chain Analyst"
+    ],
+    "progression": [
+      "Supply Chain Analyst",
+      "Logistics Coordinator",
+      "Supply Chain Manager",
+      "VP of Global Supply Chain"
+    ],
+    "industry_sectors": [
+      "Global Trade",
+      "E-Commerce",
+      "Manufacturing",
+      "Pharmaceutical Distribution"
+    ],
+    "learning_difficulty": "Moderate",
+    "roadmap_stages": [
+      {
+        "title": "Supply Chain Concepts & Demand Forecasting",
+        "duration": "Month 1-2",
+        "topics": [
+          "Procurement lifecycle",
+          "Safety stock calculation",
+          "Moving averages & forecasting",
+          "Lead time analysis"
+        ],
+        "project": "Multi-Echelon Demand Forecasting Simulation"
+      },
+      {
+        "title": "Warehouse Management & Logistics Routing",
+        "duration": "Month 3-4",
+        "topics": [
+          "WMS systems",
+          "Cross-docking",
+          "Freight shipping terms (Incoterms)",
+          "Route optimization"
+        ],
+        "project": "FMCG Distribution Network Optimization Plan"
+      },
+      {
+        "title": "Global Sourcing, Risk & Sustainability",
+        "duration": "Month 5-6",
+        "topics": [
+          "Vendor scorecarding",
+          "Contract negotiation",
+          "Green logistics",
+          "Supply chain disruption management"
+        ],
+        "project": "End-to-End Enterprise Supply Chain Resiliency Strategy"
+      }
+    ]
+  },
+  {
+    "id": "tech-startup-founder",
+    "title": "Tech Startup Founder / Entrepreneur",
+    "category": "Entrepreneurship and Freelancing",
+    "industry": "Venture & Innovation",
+    "minimum_education": "No strict degree requirement; strong multidisciplinary foundation in business, product, or engineering is recommended",
+    "recommended_qualifications": "Bachelor's Degree in CS, Engineering, Business, or equivalent self-taught domain expertise",
+    "description": "Identifies high-impact market opportunities, conceptualizes minimum viable products (MVPs), recruits core teams, raises capital, and scales business operations.",
+    "responsibilities": [
+      "Conduct customer discovery interviews and validate product-market fit (PMF)",
+      "Build and iterate on lean Minimum Viable Products (MVPs) incorporating user feedback",
+      "Create financial projections, pitch decks, and present to angel investors and venture capitalists",
+      "Lead company vision, legal incorporation, talent recruitment, and go-to-market strategies"
+    ],
+    "technical_skills": [
+      "Lean Startup Methodology",
+      "MVP Prototyping",
+      "Pitch Deck Authoring",
+      "Cap Table & Equity Management",
+      "Unit Economics & Cash Burn Modeling",
+      "Go-To-Market Strategy"
+    ],
+    "soft_skills": [
+      "Extreme Resilience",
+      "Visionary Persuasion",
+      "Risk Tolerance",
+      "Speed of Execution",
+      "Adaptability"
+    ],
+    "courses": [
+      "How to Start a Startup (Y Combinator curriculum)",
+      "Venture Capital & Pitching",
+      "Product-Market Fit Validation"
+    ],
+    "certifications": [
+      "No formal licensing required; demonstrated startup milestones are paramount"
+    ],
+    "entrance_exams": [
+      "None required; entrepreneurial merit and execution track record"
+    ],
+    "job_opportunities": [
+      "Self-Employed Startup Ventures",
+      "Venture Studios",
+      "Startup Incubators & Accelerators"
+    ],
+    "related_titles": [
+      "Chief Executive Officer (CEO)",
+      "Co-Founder",
+      "Product Founder",
+      "Independent Venture Creator"
+    ],
+    "progression": [
+      "Solo Entrepreneur",
+      "Funded Seed Founder",
+      "Series-A Scaleup CEO",
+      "Serial Entrepreneur / Venture Investor"
+    ],
+    "industry_sectors": [
+      "Technology Startups",
+      "E-Commerce",
+      "SaaS",
+      "Fintech",
+      "HealthTech"
+    ],
+    "learning_difficulty": "Challenging",
+    "roadmap_stages": [
+      {
+        "title": "Idea Ideation & Customer Validation",
+        "duration": "Month 1-2",
+        "topics": [
+          "Problem-solution fit",
+          "50 Customer interviews",
+          "Value proposition canvas",
+          "Competitor matrix"
+        ],
+        "project": "Customer Discovery Report & Validated Problem Statement"
+      },
+      {
+        "title": "No-Code / Rapid MVP Prototyping & Launch",
+        "duration": "Month 3-4",
+        "topics": [
+          "Landing page validation",
+          "No-code tools or Flask/React MVP",
+          "Waitlist acquisition",
+          "Feedback loops"
+        ],
+        "project": "Live Working Minimum Viable Product with 50 Users"
+      },
+      {
+        "title": "Unit Economics, Pitch Deck & Scaling",
+        "duration": "Month 5-6",
+        "topics": [
+          "CAC & LTV calculation",
+          "10-Slide Investor pitch deck",
+          "Incorporation & term sheets",
+          "Growth marketing"
+        ],
+        "project": "Investment-Ready Pitch Deck and Financial Projections"
+      }
+    ]
+  }
+]

@@ -231,3 +231,178 @@ def recommend_careers(student):
     )
 
     return scores[:3]
+
+
+def recommend_global_careers(student, catalog_careers=None, top_k=5):
+    """
+    Match student profile against the comprehensive 22-category global career catalog.
+    Uses transparent, deterministic multi-dimensional scoring (Interests, Skills,
+    Work Style, Academic Background, and Proficiency).
+
+    Returns top candidate careers with match scores, transparent explanations,
+    matched skills, and skills to learn next.
+    """
+    import careers_catalog
+
+    if catalog_careers is None:
+        catalog_careers = careers_catalog.get_all_careers()
+
+    if not catalog_careers:
+        # Fallback to the 6 tech careers if database catalog is empty
+        return recommend_careers(student)
+
+    # Normalize student inputs
+    degree = str(student.get("degree", "")).strip().lower()
+    field_of_study = str(student.get("field_of_study", "")).strip().lower()
+    interests = set(str(i).strip().lower() for i in student.get("interests", []))
+    programming = set(str(p).strip() for p in student.get("programming", []))
+    technical = set(str(t).strip() for t in student.get("technical", []))
+    work = str(student.get("work", "")).strip().lower()
+    proficiency = str(student.get("proficiency", "Beginner")).strip().lower()
+
+    # Combine all student skills
+    selected_skills = set()
+    for p in programming:
+        selected_skills.add(p.lower())
+    for t in technical:
+        selected_skills.add(t.lower())
+        if t.lower() == "htmlcss":
+            selected_skills.add("html5")
+            selected_skills.add("css3")
+            selected_skills.add("html/css")
+        elif t.lower() == "ml":
+            selected_skills.add("machine learning")
+            selected_skills.add("scikit-learn")
+        elif t.lower() == "dataviz":
+            selected_skills.add("data visualization")
+            selected_skills.add("power bi / tableau")
+
+    proficiency_levels = {"beginner": 0, "intermediate": 1, "advanced": 2}
+    prof_mod = proficiency_levels.get(proficiency, 0) / 2  # 0.0, 0.5, 1.0
+
+    scores = []
+
+    for career in catalog_careers:
+        c_title = career["title"]
+        c_cat = career["category"].lower()
+        c_ind = career["industry"].lower()
+        c_desc = career["description"].lower()
+        c_skills = career["technical_skills"]
+        c_skills_lower = [s.lower() for s in c_skills]
+
+        # 1. Interests Score (30%)
+        interest_matches = []
+        interest_weight = 30
+        for interest in interests:
+            if (interest in c_cat) or (interest in c_ind) or (interest in c_desc) or (interest in c_title.lower()):
+                interest_matches.append(interest.title())
+
+        interest_score = min(len(interest_matches) / max(len(interests), 1), 1.0) if interests else 0.2
+
+        # 2. Skills Match (35%)
+        matched_skills_display = []
+        skills_to_learn_display = []
+
+        for skill, skill_lower in zip(c_skills, c_skills_lower):
+            matched = False
+            for user_skill in selected_skills:
+                if user_skill in skill_lower or skill_lower in user_skill:
+                    matched = True
+                    break
+            if matched:
+                matched_skills_display.append(skill)
+            else:
+                skills_to_learn_display.append(skill)
+
+        skill_overlap_ratio = len(matched_skills_display) / max(len(c_skills), 1) if c_skills else 0.0
+        skill_score = skill_overlap_ratio * 35
+
+        # 3. Preferred Work Match (15%)
+        work_score = 0
+        work_match_note = None
+        if work:
+            work_keywords = {
+                "coding": ["software", "developer", "engineer", "python", "programming", "devops", "cloud"],
+                "data": ["data", "analytics", "analyst", "scientist", "statistics", "business intelligence"],
+                "ai": ["ai", "machine learning", "nlp", "artificial intelligence", "deep learning"],
+                "testing": ["tester", "qa", "quality assurance", "testing"],
+                "design": ["design", "ui", "ux", "architect", "creative", "web developer", "content"],
+                "management": ["manager", "hr", "business", "supply chain", "hotel", "consultant"],
+                "healthcare": ["doctor", "physician", "pharmacist", "nurse", "medical", "health"],
+                "finance": ["accountant", "financial", "auditor", "finance", "banker"],
+                "research": ["scientist", "researcher", "professor", "biotechnology"],
+            }
+            target_words = work_keywords.get(work, [work])
+            for word in target_words:
+                if word in c_title.lower() or word in c_desc or word in c_cat:
+                    work_score = 15
+                    work_match_note = f"Matches your preferred focus on {work.title()}"
+                    break
+
+        # 4. Degree & Academic Background (10%)
+        academic_score = 0
+        if degree:
+            if degree in ["b.tech", "mca", "bca", "m.tech"] and ("software" in c_cat or "ai" in c_cat or "data" in c_cat or "engineering" in c_cat or "cyber" in c_cat):
+                academic_score = 10
+            elif degree in ["b.com", "mba", "bba"] and ("commerce" in c_cat or "business" in c_cat or "finance" in c_cat or "logistics" in c_cat):
+                academic_score = 10
+            elif degree in ["mbbs", "b.pharm"] and ("medical" in c_cat or "healthcare" in c_cat):
+                academic_score = 10
+            elif degree in ["llb"] and "law" in c_cat:
+                academic_score = 10
+            elif degree in ["b.sc"] and ("science" in c_cat or "data" in c_cat or "software" in c_cat or "environment" in c_cat or "agri" in c_cat):
+                academic_score = 10
+            elif degree in ["ba"] and ("media" in c_cat or "creative" in c_cat or "education" in c_cat or "government" in c_cat):
+                academic_score = 10
+            else:
+                academic_score = 5
+
+        # 5. Proficiency Bonus (10%)
+        prof_score = prof_mod * 10
+
+        # Total Match Percentage
+        total_match = round(
+            (interest_score * interest_weight)
+            + skill_score
+            + work_score
+            + academic_score
+            + prof_score
+        )
+        total_match = max(0, min(total_match, 98))  # Cap at 98% to represent transparent recommendation
+
+        # Generate transparent reasons
+        reasons = []
+        if interest_matches:
+            reasons.append(f"Field interests aligned: {', '.join(interest_matches)}")
+        if matched_skills_display:
+            reasons.append(f"Existing skill foundation: {', '.join(matched_skills_display[:3])}")
+        if work_match_note:
+            reasons.append(work_match_note)
+        if academic_score >= 10:
+            reasons.append(f"Well-suited to your academic program ({degree.upper()})")
+        if not reasons:
+            reasons.append("Exploratory career match with transferrable potential based on your responses.")
+
+        scores.append({
+            "id": career["id"],
+            "career_id": career["id"],
+            "name": career["title"],
+            "title": career["title"],
+            "category": career["category"],
+            "industry": career["industry"],
+            "minimum_education": career["minimum_education"],
+            "description": career["description"],
+            "match": total_match,
+            "skills": c_skills,
+            "matched_skills": matched_skills_display,
+            "skills_to_learn": skills_to_learn_display[:5],
+            "reasons": reasons,
+            "courses": career.get("courses", []),
+            "certifications": career.get("certifications", []),
+            "progression": career.get("progression", []),
+            "learning_difficulty": career.get("learning_difficulty", "Moderate"),
+        })
+
+    scores.sort(key=lambda item: item["match"], reverse=True)
+    return scores[:top_k]
+

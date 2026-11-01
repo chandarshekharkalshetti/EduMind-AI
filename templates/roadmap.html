@@ -1,121 +1,112 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Roadmap | EduMind AI</title>
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='style.css') }}">
+    <title>{{ career }} – Career Roadmap | EduMind AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
 <header class="navbar">
-    <a href="/" class="logo">EduMind <span>AI</span></a>
+    <a href="{{ url_for('home') }}" class="logo">EduMind <span>AI</span></a>
     <nav>
-        <a href="/">Home</a>
-        <a href="/assessment">Assessment</a>
-        <a href="/results">Results</a>
-        <a href="/roadmap">Roadmap</a>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('careers_directory') }}">Explore Careers</a>
+        <a href="{{ url_for('assessment') }}">Assessment</a>
+        {% if current_user %}
+            <a href="{{ url_for('dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('profile') }}">Profile</a>
+            <a href="{{ url_for('logout') }}" class="secondary-btn nav-btn">Logout ({{ current_user.full_name.split()[0] }})</a>
+        {% else %}
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}" class="primary-btn nav-btn">Get Started</a>
+        {% endif %}
     </nav>
 </header>
 
 <main class="roadmap-container">
 
     <section class="roadmap-heading">
-        <p class="eyebrow">YOUR LEARNING JOURNEY</p>
-        <h1>Build Your Career Roadmap</h1>
-        <p>Follow these learning stages to develop practical skills.</p>
+        <p class="eyebrow">PERSONALIZED LEARNING JOURNEY</p>
+        <h1>{{ career }} Roadmap</h1>
+        <p>Follow this structured learning pathway designed to build practical, portfolio-ready skills.</p>
     </section>
 
+    <!-- Duration Selector Tabs -->
+    <div class="roadmap-duration-bar">
+        <span class="duration-label">Learning Pace:</span>
+        <div class="duration-pills">
+            <a href="{{ url_for('roadmap', career=career, duration=3) }}" class="duration-pill {% if duration == 3 %}active{% endif %}">3 Months (Accelerated)</a>
+            <a href="{{ url_for('roadmap', career=career, duration=6) }}" class="duration-pill {% if duration == 6 or not duration %}active{% endif %}">6 Months (Comprehensive)</a>
+            <a href="{{ url_for('roadmap', career=career, duration=12) }}" class="duration-pill {% if duration == 12 %}active{% endif %}">12 Months (Deep Mastery)</a>
+        </div>
+    </div>
+
+    <!-- Career Intro Card -->
     <section class="roadmap-intro">
-        <p class="career-tag">SAMPLE ROADMAP</p>
-        <h2>Python Developer</h2>
-        <p>
-            Start with programming fundamentals, build projects,
-            and gradually learn backend development.
-        </p>
+        <div class="roadmap-intro-top">
+            <span class="career-tag">{{ roadmap_data.category or "CAREER PATHWAY" }}</span>
+            <span class="roadmap-duration-badge">{{ roadmap_data.duration_label or (duration ~ " Months") }}</span>
+        </div>
+        <h2>{{ career }}</h2>
+        <p>{{ roadmap_data.description }}</p>
+
+        <div class="roadmap-save-bar">
+            {% if current_user %}
+                <button id="save-roadmap-btn" class="secondary-btn btn-sm" onclick="saveRoadmap()">
+                    💾 Save Roadmap to Dashboard
+                </button>
+            {% else %}
+                <a href="{{ url_for('login', next=request.full_path) }}" class="secondary-btn btn-sm">
+                    Sign in to save roadmap
+                </a>
+            {% endif %}
+            <a href="{{ url_for('career_detail', career_id=roadmap_data.career_id or career) }}" class="secondary-btn btn-sm">
+                View Full Career Profile →
+            </a>
+        </div>
     </section>
 
+    <!-- Dynamic Roadmap Timeline -->
     <section class="roadmap-timeline">
+        {% for stage in roadmap_data.stages %}
+            <article class="roadmap-step">
+                <div class="timeline-number">
+                    {{ "%02d" | format(loop.index) }}
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-header-row">
+                        <p class="step-label">{{ stage.label or ("STAGE " ~ loop.index) }}</p>
+                        {% if stage.duration %}
+                            <span class="stage-duration-tag">{{ stage.duration }}</span>
+                        {% endif %}
+                    </div>
 
-        <article class="roadmap-step">
-            <div class="timeline-number">01</div>
-            <div class="timeline-content">
-                <p class="step-label">STAGE 1</p>
-                <h3>Learn Python Fundamentals</h3>
-                <p>Understand the building blocks of programming.</p>
-                <ul>
-                    <li>Variables and data types</li>
-                    <li>Conditions and loops</li>
-                    <li>Functions and collections</li>
-                    <li>Basic problem-solving exercises</li>
-                </ul>
-                <p class="project-idea">
-                    <strong>Practice project:</strong> Student marks calculator
-                </p>
-            </div>
-        </article>
+                    <h3>{{ stage.title }}</h3>
 
-        <article class="roadmap-step">
-            <div class="timeline-number">02</div>
-            <div class="timeline-content">
-                <p class="step-label">STAGE 2</p>
-                <h3>Learn SQL and Git</h3>
-                <p>Develop database and version-control skills.</p>
-                <ul>
-                    <li>SQL queries and joins</li>
-                    <li>Database fundamentals</li>
-                    <li>Git commits and branches</li>
-                    <li>GitHub repositories</li>
-                </ul>
-                <p class="project-idea">
-                    <strong>Practice project:</strong> Student record system
-                </p>
-            </div>
-        </article>
+                    {% if stage.topics %}
+                        <ul>
+                            {% for topic in stage.topics %}
+                                <li>{{ topic }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
 
-        <article class="roadmap-step">
-            <div class="timeline-number">03</div>
-            <div class="timeline-content">
-                <p class="step-label">STAGE 3</p>
-                <h3>Build Web Applications</h3>
-                <p>Use Python to create applications that run in a browser.</p>
-                <ul>
-                    <li>HTML and CSS</li>
-                    <li>Flask routes and templates</li>
-                    <li>Forms and request handling</li>
-                    <li>Connecting a database</li>
-                </ul>
-                <p class="project-idea">
-                    <strong>Practice project:</strong> Task management website
-                </p>
-            </div>
-        </article>
-
-        <article class="roadmap-step">
-            <div class="timeline-number">04</div>
-            <div class="timeline-content">
-                <p class="step-label">STAGE 4</p>
-                <h3>Build Your Portfolio</h3>
-                <p>Demonstrate your skills with complete projects.</p>
-                <ul>
-                    <li>Complete two or three useful projects</li>
-                    <li>Write clear GitHub READMEs</li>
-                    <li>Test your applications</li>
-                    <li>Prepare your resume and interview skills</li>
-                </ul>
-                <p class="project-idea">
-                    <strong>Career preparation:</strong> Apply for Python developer internships
-                </p>
-            </div>
-        </article>
-
+                    {% if stage.project %}
+                        <div class="project-idea">
+                            <strong>📌 Practice Milestone Project:</strong> {{ stage.project }}
+                        </div>
+                    {% endif %}
+                </div>
+            </article>
+        {% endfor %}
     </section>
 
     <div class="roadmap-actions">
-        <a href="/assessment" class="secondary-btn">Retake Assessment</a>
-        <a href="/" class="primary-btn">Back to Home</a>
+        <a href="{{ url_for('assessment') }}" class="secondary-btn">Retake Assessment</a>
+        <a href="{{ url_for('careers_directory') }}" class="secondary-btn">Explore Other Careers</a>
+        <a href="{{ url_for('home') }}" class="primary-btn">Back to Home</a>
     </div>
 
 </main>
@@ -123,6 +114,28 @@
 <footer>
     <p>© 2026 EduMind AI | Student Career Guidance Platform</p>
 </footer>
+
+<script>
+function saveRoadmap() {
+    const btn = document.getElementById('save-roadmap-btn');
+    fetch('/api/save-roadmap', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+            career: {{ career | tojson }},
+            duration: {{ duration or 6 }}
+        })
+    })
+    .then(r => r.json())
+    .then(data => {
+        if (data.status === 'ok') {
+            btn.innerHTML = '✓ Saved in Dashboard!';
+            btn.style.color = '#16a34a';
+        }
+    })
+    .catch(err => console.error(err));
+}
+</script>
 
 </body>
 </html>

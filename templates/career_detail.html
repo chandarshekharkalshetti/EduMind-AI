@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ career.title }} – Career Profile | EduMind AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="{{ url_for('home') }}" class="logo">EduMind <span>AI</span></a>
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('careers_directory') }}" class="nav-link active">Explore Careers</a>
+        <a href="{{ url_for('assessment') }}">Assessment</a>
+        {% if current_user %}
+            <a href="{{ url_for('dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('profile') }}">Profile</a>
+            <a href="{{ url_for('logout') }}" class="secondary-btn nav-btn">Logout ({{ current_user.full_name.split()[0] }})</a>
+        {% else %}
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}" class="primary-btn nav-btn">Get Started</a>
+        {% endif %}
+    </nav>
+</header>
+
+<main class="career-detail-container">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+        <a href="{{ url_for('careers_directory') }}">← Back to Career Directory</a>
+        <span>/</span>
+        <span>{{ career.category }}</span>
+        <span>/</span>
+        <span class="breadcrumb-current">{{ career.title }}</span>
+    </nav>
+
+    <!-- Header Banner -->
+    <section class="career-header-card">
+        <div class="career-header-top">
+            <span class="category-pill">{{ career.category }}</span>
+            <span class="badge badge-difficulty difficulty-{{ career.learning_difficulty | lower }}">{{ career.learning_difficulty }} Learning Curve</span>
+        </div>
+
+        <h1>{{ career.title }}</h1>
+        <p class="career-hero-description">{{ career.description }}</p>
+
+        <div class="career-quick-facts-grid">
+            <div class="fact-box">
+                <span class="fact-label">INDUSTRY</span>
+                <strong>{{ career.industry or "General Professional" }}</strong>
+            </div>
+            <div class="fact-box">
+                <span class="fact-label">MINIMUM EDUCATION</span>
+                <strong>{{ career.minimum_education }}</strong>
+            </div>
+            <div class="fact-box">
+                <span class="fact-label">RECOMMENDED BACKGROUND</span>
+                <strong>{{ career.recommended_qualifications }}</strong>
+            </div>
+        </div>
+
+        <div class="header-action-buttons">
+            <a href="{{ url_for('roadmap', career=career.title) }}" class="primary-btn">
+                Build Personalized Roadmap →
+            </a>
+            <a href="{{ url_for('compare_careers', c1=career.id) }}" class="secondary-btn">
+                ⚖ Compare with Another Career
+            </a>
+            <button class="bookmark-btn {% if is_saved %}bookmarked{% endif %}"
+                    onclick="toggleBookmark('{{ career.id }}', this)">
+                {% if is_saved %}★ Saved in Dashboard{% else %}☆ Save to My Careers{% endif %}
+            </button>
+        </div>
+    </section>
+
+    <!-- Two-Column Details Layout -->
+    <div class="detail-columns-grid">
+
+        <!-- Left Column: Core Work, Skills & Progression -->
+        <div class="detail-main-column">
+
+            <!-- Responsibilities -->
+            <section class="detail-section-card">
+                <h2>📋 Key Responsibilities & Day-to-Day Work</h2>
+                <ul class="responsibilities-list">
+                    {% for item in career.responsibilities %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+
+            <!-- Required Skills -->
+            <section class="detail-section-card">
+                <h2>🛠 Required Skills Profile</h2>
+
+                <h3>Technical & Domain Skills</h3>
+                <div class="skill-chips-lg">
+                    {% for skill in career.technical_skills %}
+                        <span class="skill-chip-lg">{{ skill }}</span>
+                    {% endfor %}
+                </div>
+
+                <h3 style="margin-top: 24px;">Core Soft Skills & Attributes</h3>
+                <div class="skill-chips-lg">
+                    {% for skill in career.soft_skills %}
+                        <span class="skill-chip-lg skill-chip-soft">{{ skill }}</span>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <!-- Career Progression Hierarchy -->
+            <section class="detail-section-card">
+                <h2>📈 Career Progression & Growth Path</h2>
+                <div class="progression-timeline">
+                    {% for step in career.progression %}
+                        <div class="progression-milestone">
+                            <span class="milestone-number">{{ loop.index }}</span>
+                            <div class="milestone-content">
+                                <strong>{{ step }}</strong>
+                                <p>Stage {{ loop.index }} professional milestone</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <!-- Related Job Titles -->
+            {% if career.related_titles %}
+                <section class="detail-section-card">
+                    <h2>🏷 Related Job Titles & Variations</h2>
+                    <div class="related-tags-list">
+                        {% for title in career.related_titles %}
+                            <span class="related-title-tag">{{ title }}</span>
+                        {% endfor %}
+                    </div>
+                </section>
+            {% endif %}
+
+        </div>
+
+        <!-- Right Column: Education, Courses, Exams & Related Careers -->
+        <div class="detail-sidebar-column">
+
+            <!-- Recommended Courses & Certifications -->
+            <section class="detail-sidebar-card">
+                <h3>🎓 Recommended Courses</h3>
+                <ul class="sidebar-item-list">
+                    {% for course in career.courses %}
+                        <li>{{ course }}</li>
+                    {% endfor %}
+                </ul>
+
+                <h3 style="margin-top: 22px;">📜 Industry Certifications</h3>
+                <ul class="sidebar-item-list">
+                    {% for cert in career.certifications %}
+                        <li>{{ cert }}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+
+            <!-- Entrance Examinations & Eligibility Disclaimer -->
+            <section class="detail-sidebar-card alert-sidebar-card">
+                <h3>🏛 Entrance Exams & Licensing</h3>
+                {% for exam in career.entrance_exams %}
+                    <p class="exam-notice">{{ exam }}</p>
+                {% endfor %}
+                <div class="statutory-disclaimer">
+                    ℹ <strong>Notice:</strong> Specific licensing requirements, entrance examinations, and employer eligibility criteria vary by country, state, and individual institution.
+                </div>
+            </section>
+
+            <!-- Target Job Sectors -->
+            <section class="detail-sidebar-card">
+                <h3>💼 Typical Employment Sectors</h3>
+                <ul class="sidebar-item-list">
+                    {% for sector in career.job_opportunities %}
+                        <li>{{ sector }}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+
+            <!-- Related Career Recommendations -->
+            {% if related_careers %}
+                <section class="detail-sidebar-card">
+                    <h3>Explore Related Careers</h3>
+                    <div class="related-careers-mini-list">
+                        {% for rel in related_careers %}
+                            <div class="related-career-item">
+                                <a href="{{ url_for('career_detail', career_id=rel.id) }}" class="related-career-title">{{ rel.title }}</a>
+                                <span class="related-career-category">{{ rel.category }}</span>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </section>
+            {% endif %}
+
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <p>© 2026 EduMind AI | Student Career Guidance Platform</p>
+</footer>
+
+<script>
+function toggleBookmark(careerId, button) {
+    fetch('/api/save-career/' + encodeURIComponent(careerId), {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'}
+    })
+    .then(response => {
+        if (response.status === 401) {
+            window.location.href = "{{ url_for('login', next=request.path) }}";
+            return null;
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (!data) return;
+        if (data.saved) {
+            button.classList.add('bookmarked');
+            button.innerHTML = '★ Saved in Dashboard';
+        } else {
+            button.classList.remove('bookmarked');
+            button.innerHTML = '☆ Save to My Careers';
+        }
+    })
+    .catch(err => console.error('Error saving career:', err));
+}
+</script>
+
+</body>
+</html>

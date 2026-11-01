@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Career Directory | EduMind AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="{{ url_for('home') }}" class="logo">EduMind <span>AI</span></a>
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('careers_directory') }}" class="nav-link active">Explore Careers</a>
+        <a href="{{ url_for('assessment') }}">Assessment</a>
+        {% if current_user %}
+            <a href="{{ url_for('dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('profile') }}">Profile</a>
+            <a href="{{ url_for('logout') }}" class="secondary-btn nav-btn">Logout ({{ current_user.full_name.split()[0] }})</a>
+        {% else %}
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}" class="primary-btn nav-btn">Get Started</a>
+        {% endif %}
+    </nav>
+</header>
+
+<main class="careers-explorer-container">
+    <section class="explorer-hero">
+        <p class="eyebrow">GLOBAL CAREER CATALOG</p>
+        <h1>Explore Careers Across All Disciplines</h1>
+        <p>Discover educational pathways, necessary skills, responsibilities, and learning roadmaps across 22 global career sectors.</p>
+    </section>
+
+    <!-- Search & Filter Toolbar -->
+    <section class="explorer-toolbar-card">
+        <form action="{{ url_for('careers_directory') }}" method="GET" class="explorer-filter-form">
+            <div class="search-input-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="search" name="q" value="{{ search_query or '' }}" placeholder="Search by career title, skill (e.g. Python, SQL, CAD), or keyword..." aria-label="Search Careers">
+                <button type="submit" class="primary-btn search-btn">Search</button>
+            </div>
+
+            <div class="filters-row">
+                <div class="filter-group">
+                    <label for="category">Category</label>
+                    <select id="category" name="category" onchange="this.form.submit()">
+                        <option value="">All 22 Categories</option>
+                        {% for cat in categories %}
+                            <option value="{{ cat }}" {% if selected_category == cat %}selected{% endif %}>{{ cat }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="difficulty">Learning Curve</label>
+                    <select id="difficulty" name="difficulty" onchange="this.form.submit()">
+                        <option value="">All Difficulties</option>
+                        {% for diff in difficulties %}
+                            <option value="{{ diff }}" {% if selected_difficulty == diff %}selected{% endif %}>{{ diff }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="sort">Sort By</label>
+                    <select id="sort" name="sort" onchange="this.form.submit()">
+                        <option value="title" {% if sort_by == 'title' %}selected{% endif %}>Alphabetical (A - Z)</option>
+                        <option value="title_desc" {% if sort_by == 'title_desc' %}selected{% endif %}>Alphabetical (Z - A)</option>
+                        <option value="category" {% if sort_by == 'category' %}selected{% endif %}>Category</option>
+                        <option value="difficulty" {% if sort_by == 'difficulty' %}selected{% endif %}>Learning Difficulty</option>
+                    </select>
+                </div>
+
+                {% if search_query or selected_category or selected_difficulty %}
+                    <div class="filter-group reset-filter-group">
+                        <label>&nbsp;</label>
+                        <a href="{{ url_for('careers_directory') }}" class="clear-filters-btn">Clear Filters ✕</a>
+                    </div>
+                {% endif %}
+            </div>
+        </form>
+
+        <div class="catalog-status-bar">
+            <span>Showing <strong>{{ total_count }}</strong> careers</span>
+            <div class="quick-links">
+                <a href="{{ url_for('compare_careers') }}" class="compare-nav-link">⚖ Compare Careers Tool</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Cards Grid -->
+    <section class="careers-grid">
+        {% for c in careers %}
+            <article class="career-catalog-card" id="career-card-{{ c.id }}">
+                <div class="card-top-bar">
+                    <span class="category-pill">{{ c.category }}</span>
+                    <button class="bookmark-btn {% if c.id in saved_career_ids %}bookmarked{% endif %}"
+                            onclick="toggleBookmark('{{ c.id }}', this)"
+                            title="Save career to dashboard"
+                            aria-label="Bookmark {{ c.title }}">
+                        {% if c.id in saved_career_ids %}★ Saved{% else %}☆ Save{% endif %}
+                    </button>
+                </div>
+
+                <h2><a href="{{ url_for('career_detail', career_id=c.id) }}">{{ c.title }}</a></h2>
+
+                <div class="career-badges-row">
+                    <span class="badge badge-industry">{{ c.industry }}</span>
+                    <span class="badge badge-difficulty difficulty-{{ c.learning_difficulty | lower }}">{{ c.learning_difficulty }}</span>
+                </div>
+
+                <p class="career-snippet">{{ c.description }}</p>
+
+                <div class="card-skills-section">
+                    <span class="skills-heading">Key Skills:</span>
+                    <div class="skill-chips">
+                        {% for skill in c.technical_skills[:4] %}
+                            <span class="skill-chip">{{ skill }}</span>
+                        {% endfor %}
+                        {% if c.technical_skills | length > 4 %}
+                            <span class="skill-chip-more">+{{ c.technical_skills | length - 4 }} more</span>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="card-actions-footer">
+                    <a href="{{ url_for('career_detail', career_id=c.id) }}" class="primary-btn card-view-btn">
+                        View Career Profile →
+                    </a>
+                    <a href="{{ url_for('roadmap', career=c.title) }}" class="secondary-btn card-roadmap-btn">
+                        Roadmap
+                    </a>
+                </div>
+            </article>
+        {% else %}
+            <div class="empty-state-card">
+                <div class="empty-icon">🔎</div>
+                <h3>No Careers Found</h3>
+                <p>No careers matched your search criteria. Try modifying your keywords or clearing the category filters.</p>
+                <a href="{{ url_for('careers_directory') }}" class="primary-btn">Reset All Filters</a>
+            </div>
+        {% endfor %}
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 EduMind AI | Student Career Guidance Platform</p>
+</footer>
+
+<script>
+function toggleBookmark(careerId, button) {
+    fetch('/api/save-career/' + encodeURIComponent(careerId), {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.status === 401) {
+            window.location.href = "{{ url_for('login', next=request.path) }}";
+            return null;
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (!data) return;
+        if (data.saved) {
+            button.classList.add('bookmarked');
+            button.innerHTML = '★ Saved';
+        } else {
+            button.classList.remove('bookmarked');
+            button.innerHTML = '☆ Save';
+        }
+    })
+    .catch(err => console.error('Error saving career:', err));
+}
+</script>
+
+</body>
+</html>

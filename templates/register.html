@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration | EduMind AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="{{ url_for('home') }}" class="logo">EduMind <span>AI</span></a>
+
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('careers_directory') }}">Explore Careers</a>
+            <a href="{{ url_for('assessment') }}">Assessment</a>
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}" class="primary-btn nav-btn">Get Started</a>
+        </nav>
+    </header>
+
+    <main class="auth-container auth-container-wide">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="card-icon">✦</div>
+                <p class="eyebrow">JOIN EDUMIND AI</p>
+                <h1>Create Student Account</h1>
+                <p class="auth-subtitle">Get personalized career guidance, discover global career paths, and build custom learning roadmaps.</p>
+            </div>
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <div class="flash-messages">
+                        {% for category, message in messages %}
+                            <div class="alert alert-{{ category }}">
+                                <span class="alert-icon">
+                                    {% if category == 'success' %}✓{% elif category == 'error' %}!{% else %}ℹ{% endif %}
+                                </span>
+                                <span>{{ message }}</span>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            <form action="{{ url_for('register') }}" method="POST" class="auth-form" novalidate>
+                <input type="hidden" name="next" value="{{ next_url or '' }}">
+
+                <div class="form-section-title">
+                    <span>1</span> Account Credentials
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="full_name">Full Name *</label>
+                        <input type="text" id="full_name" name="full_name" value="{{ form_data.full_name if form_data else '' }}" placeholder="e.g. Alex Morgan" required autofocus>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Student Email Address *</label>
+                        <input type="email" id="email" name="email" value="{{ form_data.email if form_data else '' }}" placeholder="alex@university.edu" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="password">Password *</label>
+                        <input type="password" id="password" name="password" placeholder="At least 6 characters" required>
+                        <p class="field-hint">Must contain at least 6 characters.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm_password">Confirm Password *</label>
+                        <input type="password" id="confirm_password" name="confirm_password" placeholder="Re-enter password" required>
+                    </div>
+                </div>
+
+                <div class="form-section-title">
+                    <span>2</span> Academic Background
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="degree">Current Degree / Program</label>
+                        <select id="degree" name="degree">
+                            <option value="">Select qualification</option>
+                            <option value="B.Tech" {% if form_data and form_data.degree == 'B.Tech' %}selected{% endif %}>B.Tech / B.E. (Engineering)</option>
+                            <option value="BCA" {% if form_data and form_data.degree == 'BCA' %}selected{% endif %}>BCA (Computer Applications)</option>
+                            <option value="B.Sc" {% if form_data and form_data.degree == 'B.Sc' %}selected{% endif %}>B.Sc (Sciences / IT)</option>
+                            <option value="B.Com" {% if form_data and form_data.degree == 'B.Com' %}selected{% endif %}>B.Com / BBA (Commerce & Business)</option>
+                            <option value="MBBS" {% if form_data and form_data.degree == 'MBBS' %}selected{% endif %}>MBBS / Healthcare</option>
+                            <option value="BA" {% if form_data and form_data.degree == 'BA' %}selected{% endif %}>BA (Humanities / Arts)</option>
+                            <option value="LLB" {% if form_data and form_data.degree == 'LLB' %}selected{% endif %}>LLB / Legal Studies</option>
+                            <option value="MCA" {% if form_data and form_data.degree == 'MCA' %}selected{% endif %}>MCA / M.Sc (Postgraduate)</option>
+                            <option value="M.Tech" {% if form_data and form_data.degree == 'M.Tech' %}selected{% endif %}>M.Tech / ME</option>
+                            <option value="MBA" {% if form_data and form_data.degree == 'MBA' %}selected{% endif %}>MBA / Management</option>
+                            <option value="Diploma" {% if form_data and form_data.degree == 'Diploma' %}selected{% endif %}>Polytechnic / Diploma</option>
+                            <option value="High School" {% if form_data and form_data.degree == 'High School' %}selected{% endif %}>High School / Pre-University</option>
+                            <option value="Other" {% if form_data and form_data.degree == 'Other' %}selected{% endif %}>Other Qualification</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="current_year">Current Year / Stage</label>
+                        <select id="current_year" name="current_year">
+                            <option value="">Select current year</option>
+                            <option value="1" {% if form_data and form_data.current_year == '1' %}selected{% endif %}>1st Year (Freshman)</option>
+                            <option value="2" {% if form_data and form_data.current_year == '2' %}selected{% endif %}>2nd Year (Sophomore)</option>
+                            <option value="3" {% if form_data and form_data.current_year == '3' %}selected{% endif %}>3rd Year (Junior)</option>
+                            <option value="4" {% if form_data and form_data.current_year == '4' %}selected{% endif %}>4th Year (Senior)</option>
+                            <option value="5" {% if form_data and form_data.current_year == '5' %}selected{% endif %}>Postgraduate / Final Stage</option>
+                            <option value="Graduated" {% if form_data and form_data.current_year == 'Graduated' %}selected{% endif %}>Recent Graduate</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="field_of_study">Field of Study / Major</label>
+                        <input type="text" id="field_of_study" name="field_of_study" value="{{ form_data.field_of_study if form_data else '' }}" placeholder="e.g. Computer Science, Mechanical, Finance, Biology">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="institution">College / University Name</label>
+                        <input type="text" id="institution" name="institution" value="{{ form_data.institution if form_data else '' }}" placeholder="e.g. State University">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" name="country" value="{{ form_data.country if form_data else '' }}" placeholder="e.g. India, United States, United Kingdom, Canada">
+                </div>
+
+                <button type="submit" class="primary-btn form-submit-btn">
+                    Complete Registration & Enter Dashboard →
+                </button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Already have an account? <a href="{{ url_for('login', next=next_url) }}">Sign in here</a></p>
+                <p class="auth-security-note">🎓 Supporting students across all disciplines worldwide.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 EduMind AI | Student Career Guidance Platform</p>
+    </footer>
+
+</body>
+</html>

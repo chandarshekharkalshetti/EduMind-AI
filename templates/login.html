@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login | EduMind AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="{{ url_for('home') }}" class="logo">EduMind <span>AI</span></a>
+
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('careers_directory') }}">Explore Careers</a>
+            <a href="{{ url_for('assessment') }}">Assessment</a>
+            <a href="{{ url_for('login') }}" class="nav-link active">Login</a>
+            <a href="{{ url_for('register') }}" class="primary-btn nav-btn">Get Started</a>
+        </nav>
+    </header>
+
+    <main class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="card-icon">✦</div>
+                <p class="eyebrow">STUDENT PORTAL</p>
+                <h1>Welcome Back</h1>
+                <p class="auth-subtitle">Sign in to access your dashboard, saved careers, and personalized learning roadmaps.</p>
+            </div>
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <div class="flash-messages">
+                        {% for category, message in messages %}
+                            <div class="alert alert-{{ category }}">
+                                <span class="alert-icon">
+                                    {% if category == 'success' %}✓{% elif category == 'error' %}!{% else %}ℹ{% endif %}
+                                </span>
+                                <span>{{ message }}</span>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            <form action="{{ url_for('login') }}" method="POST" class="auth-form" novalidate>
+                <input type="hidden" name="next" value="{{ next_url or '' }}">
+
+                <div class="form-group">
+                    <label for="email">Student Email Address</label>
+                    <input type="email" id="email" name="email" value="{{ email or '' }}" placeholder="student@example.edu" required autofocus>
+                </div>
+
+                <div class="form-group">
+                    <div class="label-row">
+                        <label for="password">Password</label>
+                    </div>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+
+                <button type="submit" class="primary-btn form-submit-btn">
+                    Sign In to EduMind AI →
+                </button>
+            </form>
+
+            <div class="auth-footer">
+                <p>New to EduMind AI? <a href="{{ url_for('register', next=next_url) }}">Create a free student account</a></p>
+                <p class="auth-security-note">🔒 Secure student authentication with encrypted sessions.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 EduMind AI | Student Career Guidance Platform</p>
+    </footer>
+
+</body>
+</html>
